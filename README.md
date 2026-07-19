@@ -21,7 +21,7 @@ All six subjects included: **Economics, Commerce, Civics, Accountancy, English, 
 | 7 | 🎤 **Talk to the tutor** — speak doubts via mic (speech-to-text) | ✅ / 🔑 |
 | 8 | 🔊 **Hear answers** — text-to-speech reads tutor replies aloud | ✅ / 🔑 |
 | 9 | ✍️ **Exam Answer Writer** — pick 2/5/10 marks, get board-style model answers (offline fuzzy-match bank + live AI) | ✅ / 🔑 |
-| 10 | 🔤 **Vocabulary builder** — 60 words with Telugu meanings, flashcards, meaning quiz, learned-progress | ✅ |
+| 10 | 🔤 **Vocabulary builder** — 110 words with Telugu meanings, flashcards, meaning quiz, learned-progress | ✅ |
 | 11 | 📄 **Official textbook PDFs** — opens Govt. of Telangana TOSS textbooks & model papers/blue prints in-app links | ✅ |
 | 12 | 🔑 **Bring-your-own Gemini key** — free key, stored only on the device | ✅ |
 
@@ -85,7 +85,7 @@ lib/
 ├── data/
 │   ├── year1_subjects.dart    # Inter 1st yr: 6 subjects, chapters, Q&A, MCQs
 │   ├── year2_subjects.dart    # Inter 2nd yr: 6 subjects, chapters, Q&A, MCQs
-│   └── vocabulary.dart        # 60 words + Telugu meanings
+│   └── vocabulary.dart        # 110 words + Telugu meanings
 ├── services/
 │   ├── app_state.dart         # persisted state (key, scores, learned words)
 │   ├── gemini_service.dart    # Gemini REST client with model fallbacks
