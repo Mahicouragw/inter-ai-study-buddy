@@ -1,0 +1,75 @@
+name: Build Flutter APK
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "lib/**"
+      - "pubspec.yaml"
+      - ".github/workflows/flutter-apk.yml"
+  workflow_dispatch:
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Get dependencies
+        run: flutter pub get
+
+      - name: Generate Android platform files
+        run: flutter create --platforms=android .
+
+      - name: Add mic & internet permissions
+        run: |
+          MANIFEST=android/app/src/main/AndroidManifest.xml
+          python3 - <<'EOF'
+          import re
+          p = 'android/app/src/main/AndroidManifest.xml'
+          s = open(p).read()
+          perms = ('    <uses-permission android:name="android.permission.INTERNET"/>\n'
+                   '    <uses-permission android:name="android.permission.RECORD_AUDIO"/>\n')
+          if 'RECORD_AUDIO' not in s:
+              s = s.replace('<application', perms + '    <application', 1)
+          open(p, 'w').write(s)
+          print('Manifest patched')
+          EOF
+
+      - name: Build debug APK
+        run: flutter build apk --debug
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: inter-ai-study-buddy-debug-apk
+          path: build/app/outputs/flutter-apk/app-debug.apk
+          retention-days: 90
+
+      - name: Upload APK as Release
+        if: github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          files: build/app/outputs/flutter-apk/app-debug.apk
+          tag_name: flutter-apk-${{ github.run_number }}
+          name: "Inter AI Study Buddy APK (build ${{ github.run_number }})"
+          body: |
+            🎓 Inter AI Study Buddy — debug APK built automatically from main.
+            - Install on Android: allow "Install unknown apps" for your browser/file manager
+            - Add a free Gemini API key inside the app (Settings) for AI answers
+            - Fully TalkBack-friendly: speech-to-text questions + read-aloud answers
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
