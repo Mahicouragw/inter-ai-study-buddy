@@ -10,7 +10,7 @@ ThemeData buildAppTheme() {
     colorScheme: scheme,
     useMaterial3: true,
     appBarTheme: const AppBarTheme(centerTitle: true),
-    cardTheme: CardTheme(
+    cardTheme: CardThemeData(
       elevation: 1.5,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
       margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
