@@ -6,6 +6,8 @@
 Built with **Flutter** (Android) + optional **Google Gemini (free tier)** for live AI features.
 All six subjects included: **Economics, Commerce, Civics, Accountancy, English, తెలుగు** — with official free Govt. of Telangana textbook PDFs linked inside the app.
 
+> 🆕 **v1.2.0 — Real Exam Q&A Booster:** the question bank now carries **real board-pattern long answers (5/10-mark essays) covering EVERY chapter** of all 12 subjects (Inter 1st & 2nd year), plus extra 2/4-mark questions. 225 curated Q&A entries in total.
+
 ---
 
 ## ✨ Features
@@ -13,7 +15,7 @@ All six subjects included: **Economics, Commerce, Civics, Accountancy, English, 
 | # | Feature | Works Offline? |
 |---|---------|----------------|
 | 1 | 📘 Subject browser — units & quick-revision key points | ✅ |
-| 2 | ❓ Question bank — **2-mark, 5-mark, 10-mark** model Q&A per subject (60+ per subject) | ✅ |
+| 2 | ❓ Question bank — **2-mark, 5-mark, 10-mark** real board-pattern Q&A; **essay answers cover every chapter** (~19 per subject) | ✅ |
 | 3 | 🎯 **Quizzes** — MCQ quizzes per subject with explanations, scoring & best-score tracking | ✅ |
 | 4 | ✨ **AI question generator** — creates 5 fresh quiz questions on demand (Gemini) | 🔑 |
 | 5 | 🤖 **AI Tutor chat** — ask any doubt, step-by-step answers | 🔑 |

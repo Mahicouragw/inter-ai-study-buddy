@@ -82,6 +82,13 @@ final List<Subject> year1Subjects = [
       ]),
     ],
     shortAnswers: const [
+      QA(
+          'What are the characteristics of human wants?',
+          'Human wants are: 1. Unlimited in number 2. Recurring in nature 3. Satisfiable by particular goods (a single want can be satisfied) 4. Change with time, place and person 5. Competitive with one another.'),
+      QA(
+          'Distinguish between Fixed Cost and Variable Cost.',
+          'Fixed cost does not change with output (rent, insurance, permanent salaries) and exists even at zero output. Variable cost changes with the level of output (raw material, wages of casual labour) and is zero when output is zero.'),
+
       QA('Define Microeconomics and Macroeconomics.',
           'Microeconomics studies the behaviour of individual units like a consumer, a firm or the price of a single commodity. Macroeconomics studies economy-wide aggregates such as national income, total employment, general price level and inflation.'),
       QA('Give the scarcity definition of Economics.',
@@ -104,6 +111,16 @@ final List<Subject> year1Subjects = [
           'A production function shows the technical relationship between inputs (land, labour, capital, organisation) and the maximum output that can be produced: Q = f(L, K, N, E).'),
     ],
     essays: const [
+      QA(
+          'Explain the Law of Diminishing Marginal Utility with a schedule. State its assumptions and limitations.',
+          'Introduction: Proposed by Hermann Gossen and popularised by Alfred Marshall, this is the foundation of consumer behaviour.\n\nStatement: As a consumer goes on consuming more and more units of a commodity, the marginal utility derived from each successive unit goes on diminishing.\n\nSchedule example: Unit 1 - MU 10, Unit 2 - MU 8, Unit 3 - MU 6, Unit 4 - MU 4, Unit 5 - MU 2, Unit 6 - MU 0. Total utility rises from 10 to 30 and then stops.\n\nAssumptions: 1. Units are homogeneous 2. Consumption is continuous 3. Consumer is rational 4. Cardinal measurement of utility is possible 5. Marginal utility of money is constant.\n\nLimitations: 1. Not applicable to money, gold or prestige goods 2. Utility cannot be measured exactly 3. Ignores the effect on related goods.\n\nConclusion: The law is the basis of the law of demand and of the theory of consumer surplus.'),
+      QA(
+          'Explain the short-run cost curves with a description of the diagram.',
+          'Introduction: In the short run some factors are fixed and some are variable, so costs are of two types.\n\n1. Total Fixed Cost (TFC): constant at all levels of output (rent, insurance) - a horizontal line.\n2. Total Variable Cost (TVC): changes with output (wages, raw material) - starts from the origin and rises.\n3. Total Cost: TC = TFC + TVC.\n4. Average Fixed Cost (AFC) = TFC/Q - falls continuously as output rises.\n5. Average Cost (AC) = TC/Q - U-shaped because of the law of variable proportions.\n6. Marginal Cost (MC) = change in TC / change in Q - falls first, then rises and cuts the AC curve at its lowest point.\n\nDiagram: TFC horizontal; TVC and TC rise; AFC slopes down; AC and MC are U-shaped with MC passing through the minimum point of AC.\n\nConclusion: The U-shape of AC and the relation MC = AC at minimum AC are the most examined results in the board exam.'),
+      QA(
+          'Examine the wealth definition of Adam Smith and the welfare definition of Alfred Marshall.',
+          'WEALTH DEFINITION: Adam Smith, in An Enquiry into the Nature and Causes of the Wealth of Nations (1776), called economics the science of wealth. Main points: economics studies the production and growth of wealth; wealth means material goods; man is guided by self-interest (economic man). Criticism: it ignores human welfare and treats man like a money-making machine.\n\nWELFARE DEFINITION: Alfred Marshall, in Principles of Economics (1890), defined economics as the study of mankind in the ordinary business of life - how man earns income and how he spends it. Economics studies wealth on one side and human welfare on the other, and human welfare is more important than wealth.\n\nCOMPARISON: Smith gave the first place to wealth; Marshall made economics a social science centred on man and welfare. Modern economics adds scarcity (Lionel Robbins) and growth (Samuelson).\n\nConclusion: The welfare definition is considered superior because of its human touch, but the scarcity definition is accepted as the most scientific.'),
+
       QA('Explain the Law of Demand with its assumptions and exceptions.',
           'Introduction: The law of demand shows the inverse relationship between price and quantity demanded, other things remaining constant (ceteris paribus). When price rises, demand falls; when price falls, demand rises.\n\nStatement & schedule: show a price-quantity table (e.g., at Rs.10 -> 2 units, Rs.8 -> 4 units) and a downward-sloping demand curve DD.\n\nReasons (points):\n1. Law of diminishing marginal utility - consumer buys more only at lower price.\n2. Income effect - lower price raises real income.\n3. Substitution effect - dearer goods are replaced by cheaper ones.\n4. Different uses of a commodity.\n5. Entry of new consumers at lower prices.\n\nExceptions:\n1. Giffen goods 2. Articles of prestige/Veblen goods 3. Speculation about future prices 4. Necessaries of life 5. Ignorance of consumers.\nConclusion: The law holds true in normal conditions and is fundamental to price theory.'),
       QA('Explain the Law of Variable Proportions with a diagram description.',
@@ -186,6 +203,13 @@ final List<Subject> year1Subjects = [
       ]),
     ],
     shortAnswers: const [
+      QA(
+          'What are the main clauses of a Memorandum of Association?',
+          'The Memorandum of a company contains: 1. Name clause 2. Registered office (state) clause 3. Objects clause 4. Liability clause 5. Capital clause 6. Association/subscription clause with signatures of the promoters.'),
+      QA(
+          'Define MSME (Micro, Small and Medium Enterprise).',
+          'MSMEs are small scale industrial and service units classified by investment and turnover under the MSMED Act. They generate large employment, use local resources, and support big industries by supplying parts and services.'),
+
       QA('Define Business. State any four characteristics.',
           'Business is an economic activity involving production, purchase and sale of goods and services with the objective of earning profit. Characteristics: 1. Profit motive 2. Economic activity 3. Risk and uncertainty 4. Continuity and regularity of dealings 5. Satisfaction of human wants.'),
       QA('What are Aids to Trade?',
@@ -208,6 +232,16 @@ final List<Subject> year1Subjects = [
           'BPO (Business Process Outsourcing) outsources routine processes like customer care and billing. KPO (Knowledge Process Outsourcing) outsources knowledge-based work like research, analysis, legal and financial services requiring expertise.'),
     ],
     essays: const [
+      QA(
+          'Explain the economic and social objectives of business.',
+          'ECONOMIC OBJECTIVES:\n1. Earning profit - essential for survival, growth and prestige.\n2. Creation of customers - customers are created by satisfying their needs.\n3. Innovation - regular improvement of products and processes.\n4. Best use of resources - men, money, materials and machines must not be wasted.\n5. Productivity - increase output per unit of input.\n\nSOCIAL OBJECTIVES:\n1. Supplying quality goods at fair prices.\n2. Avoiding adulteration, black marketing and false advertising.\n3. Fair wages and good working conditions to employees.\n4. Honest payment of taxes to the government.\n5. Protection of the environment from pollution.\n6. Contribution to community development - schools, hospitals, roads.\n\nConclusion: Profit is to business what food is to the body, but business is a social institution; a successful unit balances profit with service to society.'),
+      QA(
+          'Explain the features, merits and limitations of a Partnership firm.',
+          'MEANING: The Indian Partnership Act, 1932 defines partnership as the relation between persons who have agreed to share the profits of a business carried on by all or any of them acting for all.\n\nFEATURES: 1. Two or more persons (maximum 50) 2. Agreement, oral or written (Partnership Deed) 3. Lawful business 4. Sharing of profits 5. Mutual agency - every partner is an agent of the firm 6. Unlimited liability.\n\nMERITS: 1. Easy to form with few legal formalities 2. More capital and talent than sole trade 3. Balanced decisions by consultation 4. Sharing of risks among partners.\n\nLIMITATIONS: 1. Unlimited liability 2. Limited resources compared to a company 3. Possibility of disputes 4. Lack of continuity on death or retirement of a partner.\n\nConclusion: Partnership is suitable for medium-sized businesses such as professional firms and small factories.'),
+      QA(
+          'What is e-business? Explain its benefits and limitations.',
+          'MEANING: e-business means conducting business transactions - buying, selling, information exchange and services - through the internet and computer networks. It includes e-commerce, online banking and e-procurement.\n\nBENEFITS: 1. Global reach even for small firms 2. Open 24 hours x 365 days 3. Low cost of transactions and advertising 4. Quick delivery of digitised products 5. Convenience to customers - compare and order from home 6. Paperless records reduce storage costs.\n\nLIMITATIONS: 1. Risk of online fraud and hacking 2. Goods cannot be inspected physically before purchase 3. Delay in delivery of physical goods 4. Requires internet facility and technical knowledge 5. High initial cost of setting up a website.\n\nConclusion: With UPI payments and smartphones, e-business is expanding rapidly in India, but cyber safety is essential for its success.'),
+
       QA('Explain the different forms of business organisation.',
           'Introduction: Business can be organised in several forms based on ownership and control.\n1. Sole Proprietorship: single owner; easy to start; unlimited liability; no legal formalities.\n2. Partnership: 2-50 partners under Partnership Act 1932; mutual agency; shared profits; unlimited liability.\n3. Hindu Undivided Family: members of a HUF carry business; Karta manages; liability of co-parceners limited to their share.\n4. Joint Stock Company: registered body; separate legal person; limited liability; perpetual succession; types - private limited and public limited.\n5. Cooperative Society: voluntary association for mutual help; democratic management (one member one vote); service motive.\nConclusion: Choice of form depends on capital needs, liability, control desired and scale of operations.'),
       QA('Discuss the benefits and limitations of E-business.',
@@ -294,6 +328,13 @@ final List<Subject> year1Subjects = [
       ]),
     ],
     shortAnswers: const [
+      QA(
+          'Distinguish between Liberty and Licence.',
+          'Liberty is regulated freedom enjoyed within the limits of law and with respect for the equal freedom of others. Licence is unlimited, selfish freedom that ignores law and harms others. Liberty is a blessing; licence is a curse to society.'),
+      QA(
+          'Define Nationality. State any three elements of nationality.',
+          'Nationality is a spiritual feeling of oneness among the people of a country - the feeling we are one because we belong to one nation. Elements: 1. Common race 2. Common language 3. Common religion 4. Common history and culture 5. Common territory (any three may be explained).'),
+
       QA('Define Political Science.',
           'Political Science is the systematic study of the State, government, political institutions and political behaviour. It deals with the theory and practice of politics, law, rights, constitutions and international relations.'),
       QA('Name the four essential elements of the State.',
@@ -316,6 +357,16 @@ final List<Subject> year1Subjects = [
           'Justice means giving every person his due. It has three dimensions: social justice (no discrimination), economic justice (fair distribution of wealth), and political justice (equal political rights) - as promised in the Preamble of our Constitution.'),
     ],
     essays: const [
+      QA(
+          'Define Law. Explain the sources and kinds of law.',
+          'MEANING: Law is a body of rules of human conduct recognised and enforced by the state. In the words of Holland, law is a general rule of external human action enforced by a sovereign political authority.\n\nSOURCES OF LAW:\n1. Customs - the oldest source; most early laws were only recorded customs.\n2. Religion - holy books influenced marriage and inheritance law.\n3. Judicial decisions - precedents of courts (case law).\n4. Legislation - laws made by the legislature; the most important modern source.\n5. Equity - principles of fairness applied where strict law is insufficient.\n6. Juristic writings - opinions of great jurists.\n\nKINDS OF LAW: 1. National law - operates within a state (constitutional, civil, criminal law) 2. International law - regulates relations between states.\n\nConclusion: Law maintains order, protects rights and makes social progress possible; in a democracy law is made by the representatives of the people.'),
+      QA(
+          'Explain the meaning, kinds and safeguards of Liberty.',
+          'MEANING: Liberty means freedom to think, speak and act for the fullest development of ones personality, without unreasonable restraints. J.S. Mill stressed liberty of thought and expression.\n\nKINDS: 1. Natural liberty 2. Civil liberty - freedom within law 3. Political liberty - right to vote and take part in government 4. Economic liberty - security of job and minimum necessities 5. National liberty - freedom of the nation from foreign rule.\n\nSAFEGUARDS: 1. A written constitution guaranteeing fundamental rights 2. Independent judiciary 3. Rule of law - no one is above law 4. Free press 5. Separation of powers among legislature, executive and judiciary.\n\nConclusion: Liberty is not licence; along with every freedom there are reasonable restrictions for the safety and order of society.'),
+      QA(
+          'Define Rights. Explain their kinds and importance. What are the duties of a citizen?',
+          'MEANING: Rights are the claims recognised and protected by the state which are necessary for the fullest development of the individual (Prof. Laski).\n\nKINDS:\n1. Natural rights - right to life and liberty.\n2. Civil rights - equality before law, property, contract, freedom of speech.\n3. Political rights - right to vote, contest elections, hold public office, criticise the government.\n4. Economic rights - right to work and to adequate wages.\n\nIMPORTANCE: Rights are the pillars of democracy; they protect the individual from the misuse of state power and help personality development.\n\nDUTIES OF A CITIZEN: 1. Respect the rights of others 2. Obey laws 3. Pay taxes honestly 4. Exercise the vote 5. Protect public property 6. Defend the nation when needed.\n\nConclusion: Rights and duties are the two faces of the same coin - the enjoyment of rights depends on the faithful performance of duties.'),
+
       QA('Explain the essential elements of the State in detail.',
           'Introduction: The State is a political organisation of people in a definite territory with a government and sovereignty.\n1. Population: without people there is no state; population may vary in size and composition but there must be a permanent body of people.\n2. Territory: a fixed and definite area including land, water and airspace. Nomadic people cannot form a state without territory.\n3. Government: the agency or machinery through which the will of the state is formulated, expressed and executed - legislature, executive and judiciary.\n4. Sovereignty: the supreme and final power; internally highest authority, externally free from foreign control. This distinguishes state from all other associations.\nConclusion: All four elements together make a state; absence of any one destroys statehood.'),
       QA('Distinguish between State, Government, Society and Nation.',
@@ -401,6 +452,13 @@ final List<Subject> year1Subjects = [
       ]),
     ],
     shortAnswers: const [
+      QA(
+          'What is a Trial Balance? State its objectives.',
+          'A Trial Balance is a statement of debit and credit balances of all ledger accounts on a particular date. Objectives: 1. To check the arithmetical accuracy of postings 2. To provide the base for preparing final accounts 3. To locate errors easily.'),
+      QA(
+          'What are Subsidiary Books? Name any four.',
+          'Subsidiary books are books of original entry in which similar transactions are first recorded separately before posting to the ledger. They are: 1. Purchase book 2. Sales book 3. Purchase returns book 4. Sales returns book 5. Cash book 6. Journal proper (any four).'),
+
       QA('Define Accounting.',
           'According to the American Institute of Certified Public Accountants (AICPA), accounting is the art of recording, classifying and summarising in a significant manner, transactions and events which are of a financial character, and interpreting the results thereof.'),
       QA('State the objectives of Accounting.',
@@ -423,6 +481,16 @@ final List<Subject> year1Subjects = [
           'BRS is a statement prepared to reconcile (match) the difference between the bank balance shown by the cash book and the pass book on a particular date, by listing the causes of difference like unpresented cheques and bank charges.'),
     ],
     essays: const [
+      QA(
+          'Define Book Keeping and Accounting. Explain the advantages of the Double Entry System.',
+          'DEFINITIONS: Book keeping is the art of recording business transactions in a systematic manner. Accounting is a wider concept which covers recording, classifying, summarising and interpreting financial transactions (American Institute of Certified Public Accountants definition).\n\nDOUBLE ENTRY SYSTEM: every transaction has two aspects - debit and credit. For every debit there must be an equal and corresponding credit.\n\nADVANTAGES:\n1. Scientific and complete record of all transactions.\n2. Arithmetical accuracy is checked through the Trial Balance.\n3. Profit or loss is ascertained by the Profit and Loss Account.\n4. Financial position is revealed by the Balance Sheet.\n5. Reduces fraud and helps locate errors.\n6. Helps comparison between years and better decisions.\n\nLIMITATIONS: expensive for very small traders; needs skilled accountants.\n\nConclusion: Double entry is the universally accepted foundation of modern accounting.'),
+      QA(
+          'Explain the important Accounting Concepts and Conventions.',
+          'CONCEPTS:\n1. Business entity - business is separate from its owner.\n2. Money measurement - only transactions measurable in money are recorded.\n3. Going concern - the business will continue for a long time.\n4. Accounting period - life of the firm is divided into yearly periods.\n5. Cost concept - assets are recorded at cost price, not market price.\n6. Dual aspect - every debit has a credit; Assets = Liabilities + Capital.\n7. Revenue recognition - income is recorded when it is earned.\n8. Matching - expenses of a period are matched with its revenues.\n9. Accrual concept - transactions are recorded when they occur, not when cash moves.\n\nCONVENTIONS:\n1. Disclosure - full and fair reporting of all material facts.\n2. Conservatism - anticipate no profit, provide for all possible losses.\n3. Consistency - the same method is followed year after year.\n4. Materiality - disclose all significant information, ignore trivial items.\n\nConclusion: These concepts and conventions make financial statements reliable, comparable and trustworthy.'),
+      QA(
+          'What are Final Accounts? Explain the Trading Account, Profit and Loss Account and Balance Sheet.',
+          'MEANING: Final accounts are prepared at the end of the accounting period to know the profit or loss and the financial position of the business.\n\n1. TRADING ACCOUNT: shows gross profit or gross loss. Debit side: opening stock, purchases (less returns) and direct expenses like wages, carriage and factory power. Credit side: sales (less returns) and closing stock. Gross Profit = Sales + Closing Stock - (Opening Stock + Purchases + Direct expenses).\n\n2. PROFIT AND LOSS ACCOUNT: shows net profit or net loss. It records indirect expenses like salaries, rent, depreciation, interest and bad debts, and indirect incomes like discount and commission received.\n\n3. BALANCE SHEET: a statement of assets and liabilities on a particular date. Liabilities: capital, loans, creditors, outstanding expenses. Assets: fixed assets (building, machinery) and current assets (stock, debtors, cash). Both sides must tally.\n\nConclusion: The Trading account reveals earning capacity, the Profit and Loss account shows efficiency, and the Balance Sheet reveals financial strength.'),
+
       QA('Explain the important Accounting Concepts and Conventions.',
           'Introduction: Accounting is based on certain assumptions and customs so that accounts are uniform and comparable.\nConcepts:\n1. Business Entity - business and owner are separate.\n2. Money Measurement - only transactions measurable in money are recorded.\n3. Going Concern - business continues for a long period.\n4. Accounting Period - life of business divided into 12-month periods.\n5. Cost Concept - assets recorded at historical cost.\n6. Dual Aspect - every transaction has two aspects (debit = credit); basis of double entry.\n7. Matching - revenues of a period matched with the expenses of that period.\n8. Realisation & Accrual - income recognised when earned, not when cash received.\nConventions:\n1. Consistency - same accounting practice followed every year.\n2. Conservatism - anticipate no profit, provide for all possible losses.\n3. Full Disclosure - all material facts revealed.\n4. Materiality - only significant items given importance.\nConclusion: These concepts and conventions make financial statements true, fair and comparable.'),
       QA('Explain the rules of journalising with suitable examples.',
@@ -500,6 +568,13 @@ final List<Subject> year1Subjects = [
       ]),
     ],
     shortAnswers: const [
+      QA(
+          'Write any four rules for using the articles a, an and the.',
+          '1. Use a before consonant sounds (a pen, a university). 2. Use an before vowel sounds (an apple, an hour). 3. Use the for a particular or already mentioned thing (the Ganga, the boy we met). 4. Use no article before proper names of persons, most countries and uncountable nouns used generally (India, milk, honesty).'),
+      QA(
+          'Change into passive voice: (i) The teacher praised the student. (ii) She writes letters every day.',
+          '(i) The student was praised by the teacher. (ii) Letters are written by her every day. Rule: object becomes subject; verb becomes be + past participle; the doer follows by (or is dropped).'),
+
       QA('Change into passive voice: "The teacher praised the student."',
           'The student was praised by the teacher. (Object "the student" becomes the subject; V2 "praised" -> was + V3 "praised"; subject "the teacher" takes "by".)'),
       QA('Change into indirect speech: He said, "I am busy now."',
@@ -523,6 +598,13 @@ final List<Subject> year1Subjects = [
           'Polyglot. Also: one who loves books - bibliophile; one who fears water - hydrophobe.'),
     ],
     essays: const [
+      QA(
+          'Explain the structure of a formal letter and write a letter to the Municipal Commissioner requesting repair of the roads in your locality.',
+          'STRUCTURE OF A FORMAL LETTER: 1. Address of the sender 2. Date 3. Designation and address of the receiver 4. Salutation (Sir/Madam) 5. Subject line 6. Body - introduction, details, request 7. Complimentary close - Yours faithfully 8. Signature and name in block letters.\n\nSAMPLE:\nH.No. 4-56, Gandhi Nagar, Hyderabad.\n20-07-2026.\nTo\nThe Municipal Commissioner, Hyderabad.\nSir/Madam,\nSub: Request for urgent repair of roads in Gandhi Nagar.\nOn behalf of the residents of Gandhi Nagar, I wish to state that the main road of our colony is full of potholes, and the recent rains have made it dangerous for school children and elderly persons. Two minor accidents have already taken place.\nI therefore request you to kindly arrange immediate repair of the road and the street lights.\nThanking you,\nYours faithfully,\nA. STUDENT\n\nConclusion: A good formal letter is brief, polite, and contains one clear request with complete addresses.'),
+      QA(
+          'Explain the rules for changing Direct Speech into Reported (Indirect) Speech with examples.',
+          'RULES:\n1. Remove the quotation marks and add that after the reporting verb.\n2. Change the reporting verb: said becomes told; said to becomes asked, ordered or requested according to the sentence type.\n3. When the reporting verb is in the past, the tense moves one step back: simple present to simple past, present continuous to past continuous, present perfect to past perfect, will to would, can to could.\n4. Pronouns change with person: I to he or she, my to his or her, we to they.\n5. Time and place words change: now to then, today to that day, yesterday to the previous day, tomorrow to the next day, here to there.\n\nEXAMPLES:\n1. He said, I am tired. - He said that he was tired.\n2. She said to me, Will you help me? - She asked me if I would help her.\n3. The teacher said, Sit down. - The teacher ordered the students to sit down.\n4. Ravi said, I wrote the exam yesterday. - Ravi said that he had written the exam the previous day.\n5. Anu said, I can swim. - Anu said that she could swim.\n\nConclusion: Statements, questions, commands and exclamations each follow a pattern; practising these five rules solves most board questions.'),
+
       QA('Write a formal letter to the District Collector requesting repair of roads in your town.',
           'Format to follow:\nFrom,\n[Your Name],\nH.No, Street, Town, District.\n\nTo,\nThe District Collector,\n[Dist] Collectorate.\n\nSir/Madam,\nSub: Request for repair of roads in [Town] - Reg.\n\nI am a resident of [area]. The roads in our town are badly damaged with deep potholes. Rainwater stagnates, causing accidents and hardship to school children and the elderly. Vehicles are damaged and traffic is slow.\n\nI therefore request you to kindly order immediate repair and re-carpeting of the roads and proper drainage.\n\nThanking you,\nYours faithfully,\n[Name]\n\nPoints to remember: proper addresses, subject line, polite tone, one paragraph per idea, correct subscription.'),
       QA('Write an essay on "The Importance of English in Today\'s World".',
@@ -599,6 +681,13 @@ final List<Subject> year1Subjects = [
       ]),
     ],
     shortAnswers: const [
+      QA(
+          'వ్యంజన సంధికి రెండు ఉదాహరణలు ఇచ్చి వివరించండి.',
+          'హల్లు (వ్యంజనము) చేత కలిగే సంధి వ్యంజన సంధి (హల్ సంధి). ఉదాహరణలు: 1. సమ్ + కల్పము = సంకల్పము 2. యశస్ + త్యక్త్వా = యశస్త్యక్త్వా. ఇక్కడ మ్, స్ అనే హల్లుల వల్ల మార్పు జరిగింది.'),
+      QA(
+          'పర్యాయపదాలు అంటే ఏమిటి? నాలుగు జతలు రాయండి.',
+          'ఒకే అర్థాన్ని ఇచ్చే వేరువేరు పదాలను పర్యాయపదాలు అంటారు. ఉదాహరణలు: నీల్లు - జలము - వారి; కన్ను - నేత్రము - చూపు; ఇల్లు - గృహము - సదనము; సూర్యుడు - భానుడు - రవి.'),
+
       QA('"సంధి" అంటే ఏమిటి? ఒక ఉదాహరణ ఇవ్వండి.',
           'రెండు పదాలు కలిసినప్పుడు ఆ కలయికలో వచ్చే వర్ణ వికారాన్ని సంధి అంటారు. ఉదా: దిన + అకరము = దినకరము (అకార సంధి). విద్య + ఆలయము = విద్యాలయము.'),
       QA('సమాసము అంటే ఏమిటి? పేర్లు రాయండి.',
@@ -621,6 +710,13 @@ final List<Subject> year1Subjects = [
           '1. ప్రశ్నను జాగ్రత్తగా చదవండి. 2. పాఠంలో సంబంధిత భాగాన్ని గుర్తించండి. 3. ముఖ్యాంశాలను స్వంత మాటల్లో 5-6 వాక్యాల్లో రాయండి. 4. వ్యాకరణ దోషాలు ఉండకూడదు. 5. అవసరమైతే సామెత/ఉదాహరణ పేర్కొనండి.'),
     ],
     essays: const [
+      QA(
+          'సంధి అంటే ఏమిటి? సంధి భేదాలను ఉదాహరణలతో వివరించండి.',
+          'సంధి అంటే రెండు వర్ణములు దగ్గరగా వచ్చినప్పుడు కలిగే మార్పు. సన్ + ధి అంటే కలయిక అని అర్థం. తెలుగులో సంధులు ప్రధానంగా మూడు రకాలు:\n\n1. స్వర సంధి (అచ్చు సంధి): అచ్చుతో అచ్చు కలిసినప్పుడు ఏర్పడేది. ఉదా: దిన + ఇంద్రము = దినేంద్రము; రవి + ఇంద్రులు = రవీంద్రులు.\n\n2. వ్యంజన సంధి (హల్ సంధి): హల్లు చేత కలిగేది. ఉదా: సమ్ + కల్పము = సంకల్పము; యశస్ + త్యక్త్వా = యశస్త్యక్త్వా.\n\n3. స్వర వ్యంజన సంధి (ఉభయ సంధి): అచ్చు, హల్లు కలిసినప్పుడు ఏర్పడేది. ఉదా: మనస్ + ఇలా = మనసిలా; న + ఇది = నేది.\n\nప్రధాన సంధులు: గుణసంధి (దేవ + ఋషి = దేవర్షి), యణాదేశ సంధి (పలు + అనగా = పల్వనగా), ద్విత్వ సంధి (ఎడు + అడవి = ఎడ్డడవి) - ఇవన్నీ ఇందులోకే వస్తాయి.\n\nముగింపు: సంధి తెలిస్తే పదాన్ని విడదీయడం (విగ్రహం), పదాలను కలపడం రెండూ సులభమౌతాయి. పరీక్షలో సంధి చేయి, సంధి విడదీయి అని రెండు రకాలుగా ప్రశ్నలు అడుగుతారు.'),
+      QA(
+          'సమాసము అంటే ఏమిటి? సమాస భేదాలను ఉదాహరణలతో వివరించండి.',
+          'రెండు లేక అంతకంటే ఎక్కువ పదాలు కలిసి ఒకే పదంగా ఏర్పడటాన్ని సమాసము అంటారు. సమస్యతే ఇతి సమాసః అని సూత్రం - సంక్షిప్తీకరణమే సమాసము. సమాసాలు ఆరు రకాలు:\n\n1. ద్వంద్వ సమాసము: రెండు పదాలకూ సమాన ప్రాధాన్యం. ఉదా: రామలక్ష్మణులు, జ్ఞానవిజ్ఞానములు.\n2. తత్పురుష సమాసము: పూర్వపదానికి ప్రాధాన్యం. ఉదా: రాజపుత్రుడు (రాజు యొక్క కుమారుడు), భారతసేన (భారత దేశపు సేన).\n3. కర్మధారయ సమాసము: విశేష్య, విశేషణాల కలయిక. ఉదా: మహాత్ముడు (గొప్ప ఆత్మ కలవాడు), నీలకంఠుడు (నీలమైన కంఠము కలవాడు).\n4. ద్విగు సమాసము: సంఖ్యా పూర్వపదం. ఉదా: త్రిలోకాలు (మూడు లోకముల సమూహము), చతుర్వేదములు.\n5. బహువ్రీహి సమాసము: అన్యపద ప్రాధాన్యం. ఉదా: పీతాంబరుడు (పసుపు వస్త్రము ధరించినవాడు), శంఖచక్రధరుడు.\n6. అవ్యయీభావ సమాసము: అవ్యయ ప్రాధాన్యం. ఉదా: యథాశక్తి, అనుదినము.\n\nముగింపు: పద విగ్రహం (విడదీత) జాగ్రత్తగా రాస్తే సమాసం గుర్తించడం కష్టం కాదు. పరీక్షలో సమాసం పేరు తెలపండి అని అడిగే ప్రశ్నకు ఇదే పద్ధతి పాటించాలి.'),
+
       QA('ంలోకంలో సమాసములను ఉదాహరణలతో వివరించండి. (సమాసముల జాతుల వ్యాసం)',
           'ప్రస్తావన: రెండు లేక అంతకంటే ఎక్కువ పదాలు సంక్షిప్తమై ఒక భావాన్నివ్వడాన్ని సమాసము అంటారు. ఇది తెలుగు భాషను శక్తివంతం చేస్తుంది.\n1. ద్వంద్వ సమాసము: రెండు పదాలకూ ప్రాధాన్యం. ఉదా: పాపపుణ్యములు, సిత్రమిత్రులు.\n2. తత్పురుష సమాసము: పూర్వపద విభక్త్యర్థ సూచకం; ఉత్తరపద ప్రధానం. ఉదా: రాముడికొరకు = రాముడి కొరకు (చతుర్థీ తత్పురుష).\n3. కర్మధారయ సమాసము: ఉభయ పదాలు ఒకే వస్తువును తెలపడం/విశేషణ విశేష్య భావం. ఉదా: నీలోత్పలము, మహాత్ముడు.\n4. ద్విగు సమాసము: సంఖ్యా పూర్వపదం. ఉదా: త్రిభువనములు, పంచపాండవులు.\n5. బహువ్రీహి సమాసము: రెండు పదాలు కాక మూడో వస్తువు ప్రధానం. ఉదా: చతుర్భుజుడు (విష్ణువు).\n6. అవ్యయీభావ సమాసము: పూర్వపదం అవ్యయం. ఉదా: ప్రతియేటా, అడవిలోని.\nఉపసంహారం: సమాస విజ్ఞానం భాషా సంపదను పెంచుతుంది; పరీక్షలో విగ్రహించి పేరు రాయడం ప్రాక్టీస్ చేయాలి.'),
       QA('వ్యాస రచన ఎలా చేయాలి? - "తోటల పర్యావరణ రక్షణ" అనే అంశంపై వ్యాసం.',

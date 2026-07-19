@@ -1,7 +1,7 @@
 name: inter_ai_study_buddy
 description: AI-powered study companion for Telangana Intermediate (CEC + Languages) — questions, quizzes, ELI5 explanations, AI tutor and exam answers.
 publish_to: 'none'
-version: 1.1.0+2
+version: 1.2.0+3
 
 environment:
   sdk: '>=3.3.0 <4.0.0'

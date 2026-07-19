@@ -65,6 +65,16 @@ final List<Subject> year2Subjects = [
       ]),
     ],
     shortAnswers: const [
+      QA(
+          'Distinguish between GDP and GNP.',
+          'GDP is the money value of all final goods and services produced WITHIN the territory of a country in a year. GNP = GDP + net factor income from abroad (income earned by Indians abroad minus income earned by foreigners in India). GNP measures the total income of the nationals of the country.'),
+      QA(
+          'What is inflation? Name its two main types.',
+          'Inflation is a continuous and considerable rise in the general price level, which reduces the purchasing power of money. Types: 1. Demand-pull inflation - prices rise because demand exceeds supply 2. Cost-push inflation - prices rise because production costs (wages, raw material) increase.'),
+      QA(
+          'Explain the difference between economic growth and economic development.',
+          'Growth means only an increase in national income or output; it is a quantitative and narrow concept. Development means growth plus qualitative changes: reduction of poverty, unemployment and inequality, and better health, education and living standards. Growth without reduction of poverty is possible, but development is not possible without growth.'),
+
       QA('Distinguish between Economic Growth and Economic Development.',
           'Economic growth means a rise in real national income/output over time. Economic development is wider: growth plus changes in output composition, reduction of poverty, unemployment and inequality, and improvement in health, education and living standards. Growth is quantitative; development is qualitative.'),
       QA('Define National Income.',
@@ -88,6 +98,16 @@ final List<Subject> year2Subjects = [
           'Rythu Bandhu is a Telangana government scheme giving investment support (per acre per season) to farmers for seeds, fertilisers and pesticides before sowing, reducing their dependence on private money-lenders. Rythu Bima provides life insurance to farmers.'),
     ],
     essays: const [
+      QA(
+          'Define National Income. Explain the methods of measuring it and the difficulties involved.',
+          'DEFINITION: National income is the money value of all final goods and services produced in a country during one year.\n\nMETHODS OF MEASUREMENT:\n1. Product Method (Value Added Method): the value added by every producing unit in agriculture, industry and services is added up; intermediate goods are excluded to avoid double counting.\n2. Income Method: all factor incomes are added - rent + wages + interest + profit.\n3. Expenditure Method: final expenditure is added: C (consumption) + I (investment) + G (government) + (X - M) (net exports).\n\nDIFFICULTIES IN INDIA: 1. Large non-monetised (barter) sector 2. Illiteracy and absence of proper accounts 3. Small producers mix household and business expenditure 4. Concealment of income to avoid tax 5. Valuation of free government services 6. Danger of double counting.\n\nKEY CONCEPTS: GDP, GNP, NNP, per capita income = national income / population.\n\nConclusion: In India, MoSPI (earlier CSO) estimates national income by combining all three methods.'),
+      QA(
+          'Explain the functions of money.',
+          'Money is anything that is generally accepted as a medium of exchange. Its functions:\n\nPRIMARY FUNCTIONS:\n1. Medium of exchange - removes the double coincidence of wants of the barter system.\n2. Measure of value - the prices of all goods and services are expressed in money.\n\nSECONDARY FUNCTIONS:\n3. Store of value - wealth can be saved for the future in the form of money.\n4. Standard of deferred payments - loans and future contracts are fixed in terms of money.\n5. Transfer of value - money makes it easy to transfer wealth from place to place.\n\nCONTINGENT FUNCTIONS: 6. Basis of credit 7. Helps distribution of national income 8. Equalises marginal utilities and marginal productivities.\n\nConclusion: Money is what money does. Without money, modern division of labour and large-scale production are impossible; if money supply grows faster than goods, inflation results.'),
+      QA(
+          'Describe the functions of the Reserve Bank of India.',
+          'The Reserve Bank of India is the central bank of the country, established in 1935 and nationalised in 1949.\n\nFUNCTIONS:\n1. Note issue - monopoly right of issuing currency notes (except the one-rupee note issued by the Government).\n2. Banker to the Government - maintains accounts, loans and public debt of the Centre and the States.\n3. Bankers bank - keeps the cash reserves of commercial banks, discounts their bills and acts as the lender of last resort.\n4. Credit control - quantitative weapons (bank rate, repo rate, CRR, SLR, open market operations) and qualitative weapons (margin requirements, moral suasion).\n5. Custodian of foreign exchange reserves - maintains the external value of the rupee.\n6. Promotional functions - financial inclusion, priority sector lending and digital payments.\n\nConclusion: By controlling currency and credit, the RBI acts as the guardian of the monetary system of India.'),
+
       QA('Explain the concepts of National Income and the difficulties in its measurement.',
           'Introduction: National income measures the economic performance of a country.\nConcepts:\n1. GDP - value of final goods & services produced within the country.\n2. GNP = GDP + net factor income from abroad.\n3. NNP = GNP - depreciation.\n4. NDP - net domestic product.\n5. Per Capita Income = National Income / Population.\n6. Personal Income & Disposable Personal Income.\nMethods: Product method (value added), Income method (wages+rent+interest+profit), Expenditure method (C+I+G+net exports).\nDifficulties:\n1. Non-marketed services (housewife services) not valued\n2. Double counting of intermediate goods\n3. Barter transactions\n4. Transfer payments included wrongly\n5. Illegal/unreported income (black money)\n6. Lack of reliable data in rural areas\nConclusion: Despite difficulties, national income is the best single indicator of economic progress.'),
       QA('Compare the Classical and Keynesian theories of employment.',
@@ -170,6 +190,13 @@ final List<Subject> year2Subjects = [
       ]),
     ],
     shortAnswers: const [
+      QA(
+          'Define Entrepreneurship. Name any four qualities of an entrepreneur.',
+          'An entrepreneur is a person who identifies a business opportunity, mobilises resources, bears risks and starts an enterprise. Qualities: 1. Innovation 2. Risk bearing 3. Self-confidence 4. Decision making 5. Leadership and hard work (any four).'),
+      QA(
+          'What is a Stock Exchange? State any two of its functions.',
+          'A stock exchange is an organised market for the purchase and sale of shares and debentures of companies. Examples: BSE (Mumbai) and NSE. Functions: 1. Provides a ready market for securities 2. Mobilises savings into investment 3. Protects investors through rules and SEBI supervision.'),
+
       QA('Define Management.',
           'Management is the art and science of getting work done through people with the aim of achieving organisational goals efficiently (minimum cost) and effectively (on time). It involves planning, organising, staffing, directing and controlling.'),
       QA('State any four functions of Management.',
@@ -192,6 +219,16 @@ final List<Subject> year2Subjects = [
           'Balance of Payments is a systematic record of all economic transactions between residents of a country and the rest of the world during a year. It includes the current account (goods, services, transfers) and the capital account (investments, loans).'),
     ],
     essays: const [
+      QA(
+          'Define Management. Explain the fourteen principles of management given by Henry Fayol.',
+          'DEFINITION: Management is the art of getting things done through others to achieve organisational objectives efficiently. Its functions are planning, organising, staffing, directing and controlling (POSDC).\n\nFAYOL PRINCIPLES OF MANAGEMENT (14):\n1. Division of work - specialisation increases efficiency.\n2. Authority and responsibility - they must go together.\n3. Discipline - obedience and respect for agreements.\n4. Unity of command - one subordinate, one boss.\n5. Unity of direction - one plan for one objective.\n6. Subordination of individual interest to general interest.\n7. Remuneration - fair wages to employees.\n8. Centralisation and decentralisation - a proper balance.\n9. Scalar chain - clear line of authority from top to bottom.\n10. Order - a place for everything and everyone.\n11. Equity - kindness and justice in dealing with employees.\n12. Stability of tenure - job security improves performance.\n13. Initiative - employees should be encouraged to think.\n14. Esprit de corps - union is strength; build team spirit.\n\nConclusion: Fayolas principles are flexible guidelines, not rigid laws; they laid the foundation of modern management thought.'),
+      QA(
+          'What is Marketing? Explain the elements of the Marketing Mix (4 Ps).',
+          'MEANING: Marketing is the process of identifying the needs of consumers and satisfying them profitably. It begins and ends with the consumer.\n\nMARKETING MIX - 4 Ps:\n1. PRODUCT: design, quality, features, brand name, packaging and after-sales service.\n2. PRICE: pricing policy, discounts and credit terms; the price must suit the target customers (penetration pricing or skimming pricing).\n3. PLACE (physical distribution): channels of distribution, transport, warehousing and online selling.\n4. PROMOTION: advertising, personal selling, sales promotion, publicity and digital marketing.\n\nFor services, the mix is extended to 7 Ps by adding People, Process and Physical evidence.\n\nConclusion: A successful marketer blends the four Ps according to the target market; a wrong price or channel can fail even a good product.'),
+      QA(
+          'Explain the rights of consumers under the Consumer Protection Act, 2019.',
+          'The Consumer Protection Act, 2019 replaced the 1986 Act and also covers e-commerce.\n\nRIGHTS OF CONSUMERS:\n1. Right to safety - protection against hazardous goods and services.\n2. Right to information - full details of quality, quantity and price.\n3. Right to choose - access to a variety of goods at competitive prices; no forcing of tie-in sales.\n4. Right to be heard - complaints must receive due consideration.\n5. Right to seek redressal - compensation for unfair trade practices, misleading advertisements and defective products (product liability).\n6. Right to consumer awareness - consumers must be educated about their rights.\n\nREDRESSAL MACHINERY: District Commission (claims up to Rs 1 crore), State Commission (Rs 1 crore to Rs 10 crores), National Commission (above Rs 10 crores). The Central Consumer Protection Authority (CCPA) protects consumers as a class.\n\nConclusion: The message of the Act is Jago Grahak Jago - an aware consumer is the best protection against exploitation.'),
+
       QA('Explain the 14 principles of management given by Henri Fayol.',
           'Introduction: Henri Fayol, the father of modern management, gave 14 principles in "Industrial and General Administration".\n1. Division of Work - specialisation increases efficiency.\n2. Authority and Responsibility - both go together.\n3. Discipline - obedience and respect for agreements.\n4. Unity of Command - one subordinate receives orders from one superior only.\n5. Unity of Direction - one plan, one head for activities with the same objective.\n6. Subordination of Individual Interest to General Interest.\n7. Remuneration - fair wages to employees.\n8. Centralisation - right degree of concentration of authority.\n9. Scalar Chain - formal line of authority from top to bottom.\n10. Order - right person/thing at the right place.\n11. Equity - justice and kindness to employees.\n12. Stability of Tenure - job security improves performance.\n13. Initiative - encourage employees to take initiative.\n14. Esprit de Corps - "union is strength"; promote team spirit.\nConclusion: These principles guide managers to run organisations efficiently; they are flexible, not rigid rules.'),
       QA('Explain the Marketing Mix (4 Ps) in detail.',
@@ -278,6 +315,13 @@ final List<Subject> year2Subjects = [
       ]),
     ],
     shortAnswers: const [
+      QA(
+          'Explain the composition and functions of the Election Commission of India.',
+          'The Election Commission consists of the Chief Election Commissioner and two Election Commissioners appointed by the President. Functions: 1. Prepares electoral rolls 2. Conducts elections to Parliament, State Legislatures, President and Vice-President 3. Recognises political parties and allots symbols 4. Enforces the Model Code of Conduct.'),
+      QA(
+          'Distinguish between a Political Party and a Pressure Group.',
+          'A political party contests elections and tries to capture power (Congress, BJP etc.). A pressure group only influences the government without contesting elections (trade unions, farmers associations). Parties have broad programmes; pressure groups fight for narrow sectional interests.'),
+
       QA('Write any four salient features of the Indian Constitution.',
           '1. It is the lengthiest written constitution in the world. 2. It establishes a federal structure with a unitary bias. 3. Parliamentary form of government at centre and states. 4. Guarantees six Fundamental Rights to citizens. 5. Universal adult franchise and independent judiciary. 6. Preamble declares India a Sovereign Socialist Secular Democratic Republic.'),
       QA('Name the six Fundamental Rights.',
@@ -300,6 +344,16 @@ final List<Subject> year2Subjects = [
           'Directive Principles (Part IV, Articles 36-51) are guidelines to the State to establish social and economic justice - e.g., equal pay for equal work, village panchayats, free legal aid, protection of environment. They are non-justiciable (not enforceable by courts) but fundamental in governance.'),
     ],
     essays: const [
+      QA(
+          'Explain the salient features of the Indian Constitution.',
+          'The Constitution was adopted on 26 November 1949 and came into force on 26 January 1950, drafted under the chairmanship of Dr. B.R. Ambedkar.\n\nSALIENT FEATURES:\n1. The lengthiest written constitution in the world, drawn from many sources (UK, USA, Ireland, Canada etc.).\n2. The Preamble declares India a Sovereign, Socialist, Secular, Democratic Republic securing Justice, Liberty, Equality and Fraternity.\n3. Federal in structure but unitary in spirit (quasi-federal).\n4. Parliamentary system - the President is the nominal head; the Prime Minister is the real executive.\n5. Fundamental Rights (Part III), Directive Principles (Part IV) and Fundamental Duties (Part IV-A).\n6. Universal adult franchise - every citizen of 18 years and above can vote.\n7. Independent judiciary headed by the Supreme Court.\n8. Single citizenship for the whole country.\n9. A mixture of rigidity and flexibility in the amendment procedure.\n10. Emergency provisions (Articles 352, 356, 360).\n\nConclusion: The Constitution is rightly called the soul of Indian democracy.'),
+      QA(
+          'Explain the Fundamental Rights and Fundamental Duties of Indian citizens.',
+          'FUNDAMENTAL RIGHTS (Articles 12 to 35):\n1. Right to Equality (14-18): equality before law, no discrimination on grounds of religion, race, caste, sex or place of birth, equality of opportunity, abolition of untouchability and titles.\n2. Right to Freedom (19-22): freedom of speech and expression, assembly, association, movement, residence and profession; protection of life and personal liberty (Article 21).\n3. Right against Exploitation (23-24): prohibits human trafficking, forced labour and child labour in hazardous work.\n4. Right to Freedom of Religion (25-28): freedom of conscience, practice and propagation of religion.\n5. Cultural and Educational Rights (29-30): minorities can conserve their culture and run educational institutions.\n6. Right to Constitutional Remedies (Article 32): citizens can move the Supreme Court and High Courts through writs; Dr. Ambedkar called Article 32 the heart and soul of the Constitution.\n\nFUNDAMENTAL DUTIES (Article 51-A, added by the 42nd Amendment, 1976): respect the Constitution, the National Flag and the Anthem; uphold the sovereignty and integrity of India; defend the country; promote harmony; protect the environment.\n\nConclusion: Rights without duties are meaningless; both together make a responsible citizen.'),
+      QA(
+          'Describe the powers and functions of the Prime Minister of India.',
+          'Under Article 74 there shall be a Council of Ministers headed by the Prime Minister to aid and advise the President. The President is the nominal head; the Prime Minister is the real executive.\n\nPOWERS AND FUNCTIONS:\n1. Heads the Council of Ministers - selects ministers, allocates portfolios, reshuffles and can ask any minister to resign.\n2. Acts as the link between the President and the Cabinet - communicates all decisions of the Cabinet to the President (Article 78).\n3. Leader of the Lok Sabha - announces the policies of the government and advises the President on summoning, proroguing and dissolving the House.\n4. Chief adviser to the President in appointing Governors, Ambassadors and heads of commissions.\n5. Chairman of NITI Aayog and of important cabinet committees.\n6. Shapes foreign policy and represents India in international conferences.\n\nThe Prime Minister remains in power as long as he commands a majority in the Lok Sabha.\n\nConclusion: Since the Prime Minister controls both the Cabinet and the party, the office is the most powerful position in the Indian political system.'),
+
       QA('Explain the salient features of the Indian Constitution.',
           'Introduction: The Indian Constitution, drafted by the Constituent Assembly under Dr. B.R. Ambedkar, came into force on 26 January 1950.\nFeatures:\n1. Lengthiest written constitution - originally 395 articles, 22 parts, 8 schedules.\n2. Drawn from many sources: Parliamentary system (UK), Fundamental Rights (USA), Directive Principles (Ireland), federalism (Canada), emergency (Germany).\n3. Preamble: declares India a Sovereign Socialist Secular Democratic Republic ensuring justice, liberty, equality and fraternity.\n4. Federal with unitary bias: division of powers (Union, State, Concurrent lists) but strong centre in emergencies.\n5. Parliamentary democracy: real executive (PM & Council) responsible to Lok Sabha; nominal head - President.\n6. Fundamental Rights justiciable; Fundamental Duties; Directive Principles.\n7. Independent judiciary with judicial review.\n8. Universal adult franchise, single citizenship, integrated bureaucracy (IAS/IPS).\n9. Rigid and flexible amendment procedure (Article 368).\nConclusion: It is a living document that balances rigidity with flexibility, making India the world\'s largest democracy.'),
       QA('Describe the powers and functions of the President of India / Prime Minister.',
@@ -382,6 +436,13 @@ final List<Subject> year2Subjects = [
       ]),
     ],
     shortAnswers: const [
+      QA(
+          'Distinguish between Consignment and Sale.',
+          'In consignment, goods are sent by the consignor to the consignee (agent) who sells them for a commission; ownership remains with the consignor until sale, and unsold goods may be returned. In a sale, ownership passes immediately to the buyer, who bears all risks, and goods cannot be returned if unsold.'),
+      QA(
+          'What is a Joint Venture? State any two of its features.',
+          'A joint venture is a temporary partnership formed by two or more persons for a specific business project; it ends when the project is completed. Features: 1. Formed for a specific purpose or period 2. No separate firm name 3. Profits and losses shared in an agreed ratio.'),
+
       QA('Define Depreciation. State its causes.',
           'Depreciation is the gradual and permanent decrease in the value of a fixed asset due to wear and tear, passage of time or obsolescence. Causes: constant use, effluxion of time, obsolescence (technology change), accidents, depletion (mines).'),
       QA('Distinguish between Provision and Reserve.',
@@ -404,6 +465,16 @@ final List<Subject> year2Subjects = [
           'Shares: owned capital; holders are members/owners; dividend paid out of profits (no fixed rate for equity); not redeemable (equity) during company\'s life. Debentures: borrowed capital; holders are creditors; fixed interest payable regardless of profits; redeemable after a fixed period.'),
     ],
     essays: const [
+      QA(
+          'What is Depreciation? Explain its causes and the Straight Line Method with an example.',
+          'DEFINITION: Depreciation is the gradual and permanent decrease in the value of a fixed asset due to use, passage of time and obsolescence.\n\nCAUSES: 1. Wear and tear from continuous use 2. Efflux (passage) of time 3. Obsolescence - asset becoming out of date due to new inventions 4. Depletion of natural assets like mines 5. Accidents.\n\nSTRAIGHT LINE (Fixed Instalment) METHOD: a fixed amount of depreciation is written off every year over the life of the asset.\nFormula: Annual depreciation = (Cost of asset - Scrap value) / Estimated life in years.\nExample: A machine costs Rs 1,10,000, its life is 10 years and scrap value is Rs 10,000. Annual depreciation = (1,10,000 - 10,000) / 10 = Rs 10,000 every year.\n\nMERITS: simple to calculate; the asset value becomes zero at the end of its life.\nDEMERITS: ignores interest on the capital invested; equal charge every year although repairs increase in later years.\n\nConclusion: The method suits assets with uniform use such as buildings and furniture.'),
+      QA(
+          'What is a Bill of Exchange? Explain its features and advantages.',
+          'DEFINITION (Negotiable Instruments Act, 1881): a bill of exchange is an instrument in writing containing an unconditional order, signed by the maker, directing a certain person to pay a certain sum of money only to, or to the order of, a certain person, or to the bearer of the instrument.\n\nPARTIES: Drawer (the seller or creditor who draws the bill), Drawee (the buyer or debtor), and Payee (the person who receives the payment).\n\nFEATURES: 1. In writing 2. Unconditional order to pay 3. Signed by the drawer 4. Must be accepted by the drawee 5. The amount is certain 6. Payment on a fixed or determinable date.\n\nADVANTAGES: 1. Legal evidence of the debt 2. Payment date is fixed 3. Can be discounted with a bank for ready cash 4. Can be endorsed (transferred) to another creditor 5. Settlement of business debts becomes easy.\n\nDISHONOUR: if the drawee fails to pay on the due date, the bill is said to be dishonoured; the holder may get it noted and protested by a Notary Public for legal proof.\n\nConclusion: Bills of exchange make credit sales convenient and legally safe.'),
+      QA(
+          'Explain the features of a Partnership firm and the contents of a Partnership Deed.',
+          'The Indian Partnership Act, 1932 defines a partnership as the relation between persons who have agreed to share the profits of a business carried on by all or any of them acting for all.\n\nFEATURES: 1. Two or more persons (maximum 50) 2. Agreement between partners 3. Lawful business 4. Sharing of profits and losses 5. Mutual agency - each partner can bind the firm 6. Unlimited liability 7. No separate legal existence apart from the partners.\n\nCONTENTS OF A PARTNERSHIP DEED: 1. Name and address of the firm and the partners 2. Nature and place of business 3. Date of commencement and duration 4. Capital contributed by each partner 5. Profit-sharing ratio 6. Interest on capital and on drawings 7. Salary or commission to working partners 8. Rules for admission, retirement and death of a partner 9. Method of settling disputes.\n\nIN THE ABSENCE OF A DEED: profits are shared equally; no interest on capital; no salary to partners; 6 percent interest is allowed on loans given by a partner.\n\nConclusion: A written Partnership Deed prevents disputes and gives legal strength to the firm.'),
+
       QA('Explain the Straight Line and Written Down Value methods of depreciation with examples.',
           'Introduction: Depreciation allocates the cost of a fixed asset over its useful life.\n1. Straight Line Method (Fixed Instalment Method): a fixed, equal amount is charged every year.\nFormula: Depreciation = (Cost of Asset - Scrap Value) / Estimated Life.\nExample: Cost Rs.1,10,000, scrap value Rs.10,000, life 10 years -> annual depreciation = Rs.10,000 every year. Merits: simple, asset value becomes zero at the end. Limitation: repairs rise in later years, so total charge is unequal.\n2. Written Down Value Method (Diminishing Balance Method): fixed percentage is charged on the reducing book value each year. Depreciation is heavy in early years and light later, matching heavy repairs later - total charge roughly equal every year.\nExample: asset Rs.1,00,000 @ 10% -> Yr1: 10,000 (WDV 90,000), Yr2: 9,000 (WDV 81,000).\nJournal entry (both methods): Depreciation A/c Dr. To Asset A/c; P&L A/c Dr. To Depreciation A/c.\nConclusion: SLM suits leases/patents; WDV suits machinery and is accepted for income tax in India.'),
       QA('Explain the important terms and accounting treatment of Bills of Exchange.',
@@ -482,6 +553,13 @@ final List<Subject> year2Subjects = [
       ]),
     ],
     shortAnswers: const [
+      QA(
+          'Correct the errors: (i) He is more superior to me. (ii) One of my friend has come.',
+          '(i) He is superior to me. (Superior already contains a comparative sense and takes to, not than.) (ii) One of my friends has come. (One of is followed by a plural noun but a singular verb.)'),
+      QA(
+          'Write any four common idioms with their meanings.',
+          '1. A blessing in disguise - a good thing that seemed bad at first. 2. Once in a blue moon - very rarely. 3. To burn the midnight oil - to study or work late into the night. 4. A bed of roses - an easy and comfortable situation.'),
+
       QA('Convert into a complex sentence: "He worked hard to pass the exam."',
           'He worked hard so that he could pass the exam. (Infinitive "to pass" is expanded into a subordinate clause "so that he could pass".)'),
       QA('Change into comparative degree: "Hyderabad is one of the biggest cities in India."',
@@ -504,6 +582,13 @@ final List<Subject> year2Subjects = [
           'Decide - decision; move - movement/motion; beautiful - beauty; strong - strength.'),
     ],
     essays: const [
+      QA(
+          'Explain the rules for transforming Simple sentences into Complex sentences and vice versa, with examples.',
+          'SIMPLE TO COMPLEX (expand a word or phrase into a clause):\n1. Noun phrase to Noun clause: I know his address. - I know where he lives.\n2. Infinitive to Noun clause: He hopes to win. - He hopes that he will win.\n3. Adjective phrase to Adjective clause: A person of courage is respected. - A person who has courage is respected.\n4. Adverb phrase to Adverb clause: On seeing the snake, he ran away. - When he saw the snake, he ran away.\n\nCOMPLEX TO SIMPLE (reduce the clause to a phrase):\n1. He admitted that he was tired. - He admitted his tiredness.\n2. Students who work hard will pass. - Hard-working students will pass.\n3. As he was late, he could not attend. - Being late, he could not attend.\n4. When the bell rang, the children rushed out. - The bell having rung, the children rushed out.\n\nGOLDEN RULE: A simple sentence has only one finite verb; a complex sentence has one main clause and one or more subordinate clauses. Change the form, never the meaning.\n\nConclusion: In the exam, first underline the clause or phrase, then apply the matching rule.'),
+      QA(
+          'Write a job application with a resume for the post of Clerk in a private company.',
+          'LETTER:\nFrom\nK. Aruna,\nH.No. 5-45, RTC Colony, Mahabubnagar.\nDate: 20-07-2026\n\nTo\nThe Manager,\nSurya Textiles Pvt. Ltd.,\nHyderabad.\n\nSir,\nSub: Application for the post of Clerk - reg. (Ref: advertisement in The Hindu dated 18-07-2026)\nWith reference to your advertisement, I wish to apply for the post of Clerk in your company. I am a Commerce graduate with computer knowledge and two years of office experience. My bio-data is enclosed for your kind consideration.\nIf I am given an opportunity, I assure you of sincere and dedicated service.\nThanking you,\nYours faithfully,\nK. ARUNA\n\nRESUME / BIO-DATA:\nName: K. Aruna    Father: K. Ramudu\nDate of Birth: 10-03-2000    Address: H.No. 5-45, RTC Colony, Mahabubnagar\nQualifications: B.Com (70%), Intermediate CEC (85%), SSC (80%)\nTechnical skills: MS Office, Tally, English and Telugu typing\nExperience: 2 years as Junior Assistant at Sri Sai Traders\nLanguages known: Telugu, English and Hindi\nDeclaration: I hereby declare that the above information is true to the best of my knowledge.\nPlace: Mahabubnagar    Signature: K. Aruna\n\nConclusion: Always mention the advertisement reference, keep the letter short and attach copies of certificates.'),
+
       QA('Write an essay on "Digital India - Opportunities and Challenges".',
           'Introduction: Digital India is the dream of transforming India into a digitally empowered society and knowledge economy.\nOpportunities:\n1. e-Governance - certificates, pensions and services at fingertips (T-App Folio in Telangana).\n2. Digital payments (UPI) - transparent, cashless economy.\n3. Online education and skill development beyond classrooms.\n4. Employment in IT and startups (T-Hub); work-from-home culture.\n5. Telemedicine reaching remote villages.\nChallenges:\n1. Digital divide between urban and rural India.\n2. Cyber security threats, online frauds and data privacy.\n3. Digital illiteracy among elders and the poor.\n4. Misinformation on social media.\nConclusion: With digital literacy, strong cyber security and inclusive infrastructure, Digital India can empower every citizen. The youth must use technology as a tool, not be used by it.'),
       QA('Write a report for a newspaper on "Inter Collegiate Science Fair organised in your college".',
@@ -580,6 +665,13 @@ final List<Subject> year2Subjects = [
       ]),
     ],
     shortAnswers: const [
+      QA(
+          'ఉపమాలంకారమునకు రెండు ఉదాహరణలు రాసి వివరించండి.',
+          'పోలిక చూపే పదాలు (వలె, పోలె, వంటి) ఉండే అలంకారమే ఉపమాలంకారము. ఉదాహరణలు: 1. చంద్రుడివలె మెరిసే ముఖము కలవాడు 2. సింహమువంటి ధైర్యము. రెండింటిలోనూ ఉపమేయము (ముఖము, ధైర్యము) ఉపమానముతో (చంద్రుడు, సింహము) పోల్చబడ్డాయి.'),
+      QA(
+          'మకుటము అంటే ఏమిటి? దాని ఉపయోగమేమి?',
+          'శతకములో ప్రతి పద్యము చివరా పునరావృతమయ్యే పదము లేదా పదసమూహమే మకుటము. ఉదాహరణ: వేమన శతకములో విశ్వదాభిరామ వినుట వేమన. మకుటము వల్ల కవి పేరు సులభంగా తెలుస్తుంది; అదే పద్యాలన్నీ ఒకే శతకానికి చెందినవని నిర్ధారిస్తుంది.'),
+
       QA('అలంకారము అంటే ఏమిటి? రెండు రకాలు చెప్పండి.',
           'కావ్యానికి సౌందర్యాన్ని కలిపించే శోభను అలంకారము అంటారు. రకాలు: 1. శబ్దాలంకారములు (యమకము, శ్లేష, ముక్తాపద గ్రస్తము) 2. అర్థాలంకారములు (ఉపమ, రూపక, ఉత్ప్రేక్ష, ఉల్లేఖన మొదలైనవి).'),
       QA('రూపకాలంకారము వివరించండి.',
@@ -602,6 +694,13 @@ final List<Subject> year2Subjects = [
           '1. పద్యాన్ని రెండుసార్లు పఠించి ముఖ్య భావం గ్రహించండి. 2. పద్యం ఏ గ్రంథం/శతకం నుండి వచ్చిందో సూచించండి. 3. పద్యములోని ప్రధాన అంశాన్ని 6-8 వాక్యాల్లో స్వంత మాటల్లో వివరించండి. 4. ఉపయోగించిన అలంకారం/సామెత ఉంటే పేర్కొనండి. 5. సందేశాన్ని చివరిలో పర్కొనండి (ఉదా: నీతి, ధర్మం, దేశభక్తి).'),
     ],
     essays: const [
+      QA(
+          'అలంకారము అంటే ఏమిటి? ఉపమా, రూపక, ఉత్ప్రేక్ష అలంకారాలను ఉదాహరణలతో వివరించండి.',
+          'కవిత్వానికి అందాన్ని కల్పించే ధర్మాన్ని అలంకారము అంటారు. కవిత్వమునకు సొబగు నిచ్చు ధర్మమే అలంకారము అని లక్షణము. అలంకారాలు శబ్దాలంకారాలు, అర్థాలంకారాలు, ఉభయాలంకారాలు అని మూడు వర్గాలు.\n\n1. ఉపమాలంకారము: సాదృశ్యము (పోలిక) చూపే పదాలు - వలె, పోలె, వంటి, మాదిరి - ఉంటాయి. ఉదా: చంద్రుడి వలె మెరిసే ముఖము; గజగామిని వంటి నడక.\n\n2. రూపకాలంకారము: పోలిక ఉన్నా ఉపమా పదాలు రావు; ఉపమేయాన్ని ఉపమానంగానే చూపిస్తారు (తాదాత్మ్యము). ఉదా: ముఖకమలము (ముఖమే కమలము), రామచంద్రమూర్తి (చంద్రుడివంటి రాముడు), నయనాభి (కన్ను పొప్పు).\n\n3. ఉత్ప్రేక్షాలంకారము: కనిపిస్తున్న వస్తువును వేరొక వస్తువుగా ఊహించడం; అట్టి, అన్నట్టి, ఏమో అనే భావం వస్తుంది. ఉదా: ఆ నక్షత్రములు ఆకాశమనే పొలములో పూల పందిరి అట్టివి కదా అన్న భావం.\n\nముగింపు: పద్యము లేదా గద్యము చదివినప్పుడు పోలిక పదాలున్నాయా లేవా అని గమనిస్తే మూడు అలంకారాల తేడా తెలుస్తుంది; పరీక్షలో అలంకార నిర్ణయ ప్రశ్నకు ఇది సరైన మార్గము.'),
+      QA(
+          'శతకము అంటే ఏమిటి? వేమన శతకము యొక్క ప్రాధాన్యాన్ని వివరించండి.',
+          'వంద (శతము) పద్యాల సమ్మేళనాన్ని శతకము అంటారు. ప్రతి పద్యం చివర మకుటము ఉంటుంది. శతకాలు భక్తి శతకాలు, నీతి శతకాలు, శృంగార శతకాలు అని రకాలు; వేమన శతకము నీతి శతకాలలో ప్రసిద్ధమైనది.\n\nవేమన శతకము ప్రాధాన్యము:\n1. యోగి వేమన రచించారు; విశ్వదాభిరామ వినుట వేమన అనే మకుటము ప్రతి పద్యములోనూ ఉంటుంది.\n2. సామాన్యుడికి కూడా అర్థమయ్యే సరళమైన, గాఢమైన గ్రామ్య భాష - వేమన పద్యాలు సామెతల్లా వాడుకలోకి వచ్చాయి.\n3. మూఢనమ్మకాలు, కుల, మత భేదాలు, ముఖస్తుతి, పొగరుబోతు తోచనిపనులు వంటి సామాజిక దోషాలను తీవ్రంగా విమర్శించారు.\n4. నీతి, కష్టము, ఆత్మవిశ్వాసము, మానవత్వము వంటి విలువలను బోధించారు.\nప్రసిద్ధ పద్యము సారము ఇలా ఉంటుంది: ఉప్పు, కర్పూరము రెండూ తెల్లగానైనా వాటి రుచులు వేరు; అలాగే మనుషులందరూ ఒక్కటిగా కనిపించినా మంచివారి నడక వేరు. ఇటువంటి సూక్ష్మమైన ఉపమానాలు వేమన ప్రత్యేకత.\n\nముగింపు: వేమన శతకము తెలుగు వారి మత్తులకు, మనసులకు దగ్గరైన ఆస్తి. పరీక్షలో పద్యము ఇచ్చి వివరణ (వ్యాఖ్య) రాయమని అడుగుతారు; సారాంశము + భావము కలిపి రాయాలి.'),
+
       QA('అలంకారములను లక్షణ ఉదాహరణలతో వివరించండి.',
           'ప్రస్తావన: కావ్య సౌందర్యాన్ని పెంచే శోభలే అలంకారములు. అక్షర శోభ-అర్థ శోభ-రస శోభ అనే విభాగం ఉంది;\nముఖ్యంగా రెండు రకాలు:\n1. శబ్దాలంకారములు: అక్షర/పద విన్యాసమే శోభ.\n(a) యమకము - అక్షరాలు పునరావృతమై భిన్నార్థం. ఉదా: "అక్షర" అన్ని చోట్ల భేదార్థాలు.\n(b) శ్లేష - ఒకే పదానికి రెండర్థాలు. ఉదా: కరము = చేయి/పన్ను.\n(c) ముక్తాపద గ్రస్తము - పక్షవాతముగా అర్థం మారటం.\n2. అర్థాలంకారములు: భావమే శోభ.\n(a) ఉపమ - పోలిక చూపుట ("వంటి" పదము). ఉదా: సూర్యునివంటి తేజస్సు.\n(b) రూపక - ఉపమాన రూపం ఆరోపణ. ఉదా: ఆ కవి జ్ఞాన సాగరుడు.\n(c) ఉత్ప్రేక్ష - వేరొకటిగా ఊహ. ఉదా: అరణ్యము అనటటి నిశ్శబ్దము.\n(d) ఉల్లేఖన - ఒకే కాలంలో అనేక సంభాషణలు వర్ణన.\n(e) విభావన - కారణం లేకుండా కార్యం జరగడం భావన.\n(f) అతిశయోక్తి - అతిగా చెప్పడం. ఉదా: ఆ ఉగ్రతపస్వి తపస్సుకు కాలమే ఆగిపోయింది.\nఉపసంహారం: అలంకార జ్ఞానం పద్యభావ వ్యాఖ్యానంలోను, సాహిత్య రుచిని అనుభవించడంలోనూ ఉపయోగపడుతుంది.'),
       QA('శతక కవిత్వ ప్రత్యేకతలు - సుమతీ, వేమన శతకాలను పోల్చి వివరించండి.',

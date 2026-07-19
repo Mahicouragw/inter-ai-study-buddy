@@ -103,7 +103,7 @@ class HomeScreen extends StatelessWidget {
               _FeatureCard(
                 emoji: '🔤',
                 title: 'Vocabulary',
-                subtitle: '60 words • Telugu meanings • flashcards',
+                subtitle: '110 words • Telugu meanings • flashcards',
                 onTap: () => Navigator.push(context,
                     MaterialPageRoute(builder: (_) => const VocabScreen())),
               ),
