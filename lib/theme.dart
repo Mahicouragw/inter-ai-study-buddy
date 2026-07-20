@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 
-/// App-wide theme for Inter AI Study Buddy.
-ThemeData buildAppTheme() {
+/// App-wide light theme for Inter AI Study Buddy.
+ThemeData buildAppTheme() => _base(Brightness.light);
+
+/// App-wide dark theme (great for low-vision students & night study).
+ThemeData buildAppDarkTheme() => _base(Brightness.dark);
+
+ThemeData _base(Brightness brightness) {
   final scheme = ColorScheme.fromSeed(
     seedColor: const Color(0xFF006D6F), // deep teal
-    brightness: Brightness.light,
+    brightness: brightness,
   );
   return ThemeData(
     colorScheme: scheme,

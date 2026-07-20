@@ -29,10 +29,13 @@ class StudyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final state = context.watch<AppState>();
     return MaterialApp(
       title: 'Inter AI Study Buddy',
       debugShowCheckedModeBanner: false,
       theme: buildAppTheme(),
+      darkTheme: buildAppDarkTheme(),
+      themeMode: state.themeMode,
       home: const HomeScreen(),
     );
   }

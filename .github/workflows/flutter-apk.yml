@@ -61,17 +61,11 @@ jobs:
           path: build/app/outputs/flutter-apk/app-debug.apk
           retention-days: 90
 
-      - name: Upload APK as Release
+      - name: Upload APK as Release (outage-proof)
         if: github.ref == 'refs/heads/main'
-        uses: softprops/action-gh-release@v2
-        with:
-          files: build/app/outputs/flutter-apk/app-debug.apk
-          tag_name: flutter-apk-${{ github.run_number }}
-          name: "Inter AI Study Buddy APK (build ${{ github.run_number }})"
-          body: |
-            🎓 Inter AI Study Buddy — debug APK built automatically from main.
-            - Install on Android: allow "Install unknown apps" for your browser/file manager
-            - Add a free Gemini API key inside the app (Settings) for AI answers
-            - Fully TalkBack-friendly: speech-to-text questions + read-aloud answers
+        run: python3 .github/scripts/release_apk.py
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          APK_PATH: build/app/outputs/flutter-apk/app-debug.apk
+          TAG_BASE: flutter-apk
+          RELEASE_NAME: Inter AI Study Buddy APK

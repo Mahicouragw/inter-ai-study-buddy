@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../services/app_state.dart';
+import 'bookmarks_screen.dart';
 import 'exam_answer_screen.dart';
+import 'flashcards_screen.dart';
+import 'progress_screen.dart';
 import 'quiz_home_screen.dart';
+import 'search_screen.dart';
 import 'settings_screen.dart';
 import 'subjects_screen.dart';
 import 'tutor_screen.dart';
@@ -49,7 +53,12 @@ class HomeScreen extends StatelessWidget {
               onSelected: (_) => state.setYear(2),
             ),
           ]),
-          const SizedBox(height: 8),
+          const SizedBox(height: 10),
+
+          // ---- Study dashboard ----
+          _DashboardCard(state: state),
+          const SizedBox(height: 6),
+
           if (!state.hasKey)
             Card(
               color: Theme.of(context).colorScheme.secondaryContainer,
@@ -75,16 +84,39 @@ class HomeScreen extends StatelessWidget {
               _FeatureCard(
                 emoji: '📘',
                 title: 'Subjects & Questions',
-                subtitle: 'Chapters, 2M / 5M / 10M Q&A, official PDFs',
+                subtitle: 'Chapters, 2M / 5M / 10M Q&A, official TSBIE PDFs',
                 onTap: () => Navigator.push(context,
                     MaterialPageRoute(builder: (_) => const SubjectsScreen())),
               ),
               _FeatureCard(
-                emoji: '🤖',
-                title: 'AI Tutor & ELI5',
-                subtitle: 'Ask doubts by typing or talking 🎤',
+                emoji: '🃏',
+                title: 'Flashcards',
+                subtitle: 'Flip-card revision • priority & saved sets',
+                onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (_) => const FlashcardsSubjectPicker())),
+              ),
+              _FeatureCard(
+                emoji: '🔍',
+                title: 'Search',
+                subtitle: 'Find any question across all subjects',
                 onTap: () => Navigator.push(context,
-                    MaterialPageRoute(builder: (_) => const TutorScreen())),
+                    MaterialPageRoute(builder: (_) => const SearchScreen())),
+              ),
+              _FeatureCard(
+                emoji: '🔖',
+                title: 'Saved Questions',
+                subtitle: 'Your bookmarked tough questions',
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => const BookmarksScreen())),
+              ),
+              _FeatureCard(
+                emoji: '📊',
+                title: 'My Progress',
+                subtitle: 'Streak, exam countdown, learned %',
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => const ProgressScreen())),
               ),
               _FeatureCard(
                 emoji: '🎯',
@@ -101,22 +133,81 @@ class HomeScreen extends StatelessWidget {
                     MaterialPageRoute(builder: (_) => const ExamAnswerScreen())),
               ),
               _FeatureCard(
+                emoji: '🤖',
+                title: 'AI Tutor & ELI5',
+                subtitle: 'Ask doubts by typing or talking 🎤',
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => const TutorScreen())),
+              ),
+              _FeatureCard(
                 emoji: '🔤',
                 title: 'Vocabulary',
-                subtitle: '110 words • Telugu meanings • flashcards',
+                subtitle: 'Telugu meanings • flashcards',
                 onTap: () => Navigator.push(context,
                     MaterialPageRoute(builder: (_) => const VocabScreen())),
               ),
               _FeatureCard(
                 emoji: '⚙️',
                 title: 'Settings',
-                subtitle: 'Gemini key, voice, data sources',
+                subtitle: 'Gemini key, voice, theme, official links',
                 onTap: () => Navigator.push(context,
                     MaterialPageRoute(builder: (_) => const SettingsScreen())),
               ),
             ],
           ),
         ],
+      ),
+    );
+  }
+}
+
+/// Streak 🔥 + exam countdown ⏳ + year progress, all TalkBack-announced.
+class _DashboardCard extends StatelessWidget {
+  final AppState state;
+  const _DashboardCard({required this.state});
+
+  @override
+  Widget build(BuildContext context) {
+    final subjects = subjectsForYear(state.year);
+    var total = 0;
+    var learned = 0;
+    for (final s in subjects) {
+      total += s.shortAnswers.length + s.essays.length;
+      learned += state.learnedCountFor(s.id);
+    }
+    final pct = total == 0 ? 0.0 : learned / total;
+    final days = state.daysToExam;
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(14),
+        child: Semantics(
+          label: 'Study dashboard. Streak ${state.studyStreak} days. '
+              '${days == null ? "Exam season." : "$days days to examinations."} '
+              '${(pct * 100).round()} percent of Inter ${state.year == 1 ? "1st" : "2nd"} year questions learned.',
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Wrap(spacing: 8, runSpacing: 6, children: [
+              Chip(
+                avatar: const Text('🔥'),
+                label: Text('${state.studyStreak} day streak'),
+              ),
+              Chip(
+                avatar: const Text('⏳'),
+                label: Text(days == null
+                    ? 'Exam season 🎉'
+                    : '$days days to exams'),
+              ),
+            ]),
+            const SizedBox(height: 10),
+            Text(
+              'Inter ${state.year == 1 ? "1st" : "2nd"} year: $learned / $total questions learned '
+              '(${(pct * 100).round()}%)',
+              style: const TextStyle(fontWeight: FontWeight.w600),
+            ),
+            const SizedBox(height: 6),
+            LinearProgressIndicator(value: pct, minHeight: 8),
+          ]),
+        ),
       ),
     );
   }

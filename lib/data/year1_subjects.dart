@@ -1,28 +1,29 @@
 import '../models.dart';
 
 // ---------------------------------------------------------------------------
-// Official free sources (printed & hosted by Government of Telangana)
-// TOSS Intermediate textbooks: https://www.telanganaopenschool.org/Intertextbooks.aspx
-// Language model papers / blue prints: https://www.telanganaopenschool.org/Inter_Model_QP_Blueprint.aspx
+// OFFICIAL PDF SOURCES — Telangana Board of Intermediate Education (TSBIE).
+// All documents below are hosted on the Board's own website: model question
+// papers (MQP), Basic Learning Material study PDFs (BLM) and annual plans
+// with chapter-wise weightage. No TOSS, no third-party websites.
 // ---------------------------------------------------------------------------
+const String _bieHome = 'https://tgbie.cgg.gov.in/';
+const String _biePapers = 'https://tgbie.cgg.gov.in/modelQuestionPapers.do';
+const String _c = 'https://tgbie.cgg.gov.in/scannedPhotos/Circulars';
 
-const String _eco1Pdf =
-    'https://www.telanganaopenschool.org/images/Inter_pdfs/318_Inter_Economics_EM.pdf';
-const String _com1Pdf =
-    'https://www.telanganaopenschool.org/images/Inter_pdfs/319_Commerce_Business_Studies_EM.pdf';
-const String _civ1Pdf =
-    'https://www.telanganaopenschool.org/images/Inter_pdfs/317_INTER_POLITICAL_SCIENCE_EM.pdf';
-const String _accPdf =
-    'https://www.telanganaopenschool.org/images/Inter_pdfs/Accountancy%20Book.pdf';
-const String _engModel =
-    'https://www.telanganaopenschool.org/images/ssc_pdfs/INTER_ENGLISH_Model_paper_2023.pdf';
-const String _engBlueprint =
-    'https://www.telanganaopenschool.org/images/ssc_pdfs/Inter_English_Language_Blue_Print_2023.pdf';
-const String _telModel =
-    'https://www.telanganaopenschool.org/images/ssc_pdfs/Telugu_Intermediate_model_paper_2023.pdf';
-const String _telBlueprint =
-    'https://www.telanganaopenschool.org/images/ssc_pdfs/Inter_Telugu_Language_Blue_Print_2023.pdf';
-const String _tsbiePortal = 'https://bie.tg.nic.in/';
+const String _eco1Mqp = '$_c/Economics_I_EM_MQP.pdf';
+const String _eco1Blm = '$_c/Economics_I_(EM)_BLM_(2021-22).pdf';
+const String _com1Mqp = '$_c/Commerce_I_EM_MQP.pdf';
+const String _comAcc1Blm = '$_c/Commerce_n_Accountancy_I_(EM)_BLM_2021-22.pdf';
+const String _civ1Mqp = '$_c/Political_Science_(Civics)_I_EM_MQP.pdf';
+const String _civ1Blm = '$_c/Political_Science_I_(EM)_BLM_2021-22_FINAL_(1).pdf';
+const String _eng1Mqp = '$_c/English_I_MQP.pdf';
+const String _tel1Mqp = '$_c/Telugu_I_SL_MQP.pdf';
+const String _apEco1 = '$_c/Annual_Plan_Economics_1st_Year.pdf';
+const String _apCom1 = '$_c/Annual_Plan_Commer_%26_Accountancy_1st_Year.pdf';
+const String _apCiv1 = '$_c/Annual_Plan_Political_Science_1st_Year.pdf';
+const String _apEng1 = '$_c/Annual_Plan_English_1st_Year.pdf';
+const String _apTel1 = '$_c/Annual_Plan_Telugu_1st_Year.pdf';
+
 
 /// All six Inter FIRST year subjects (English medium).
 final List<Subject> year1Subjects = [
@@ -32,8 +33,14 @@ final List<Subject> year1Subjects = [
     name: 'Economics - I',
     emoji: '📈',
     year: 1,
-    pdfUrl: _eco1Pdf,
-    pdfLabel: 'TOSS Intermediate Economics (English Medium)',
+    pdfUrl: _eco1Mqp,
+    pdfLabel: 'TSBIE official: Economics I model question paper (EM · PDF)',
+    extraLinks: const [
+      NamedLink('TSBIE official: Economics I study material / BLM (EM · PDF)', _eco1Blm),
+      NamedLink('TSBIE official: Economics I annual plan & chapter weightage (PDF)', _apEco1),
+      NamedLink('TSBIE model papers page — all subjects (official)', _biePapers),
+      NamedLink('TSBIE Board website — textbooks & e-content (official)', _bieHome),
+    ],
     chapters: const [
       Chapter('Introduction to Economics', [
         'Economics studies how people use scarce resources to satisfy unlimited wants.',
@@ -164,8 +171,14 @@ final List<Subject> year1Subjects = [
     name: 'Commerce - I',
     emoji: '🏪',
     year: 1,
-    pdfUrl: _com1Pdf,
-    pdfLabel: 'TOSS Commerce / Business Studies (English Medium)',
+    pdfUrl: _com1Mqp,
+    pdfLabel: 'TSBIE official: Commerce I model question paper (EM · PDF)',
+    extraLinks: const [
+      NamedLink('TSBIE official: Commerce & Accountancy I study material / BLM (EM · PDF)', _comAcc1Blm),
+      NamedLink('TSBIE official: Commerce & Accountancy I annual plan & chapter weightage (PDF)', _apCom1),
+      NamedLink('TSBIE model papers page — all subjects (official)', _biePapers),
+      NamedLink('TSBIE Board website — textbooks & e-content (official)', _bieHome),
+    ],
     chapters: const [
       Chapter('Nature and Purpose of Business', [
         'Business = economic activity of producing/buying-selling goods & services for profit.',
@@ -285,8 +298,14 @@ final List<Subject> year1Subjects = [
     name: 'Civics - I',
     emoji: '⚖️',
     year: 1,
-    pdfUrl: _civ1Pdf,
-    pdfLabel: 'TOSS Political Science (English Medium)',
+    pdfUrl: _civ1Mqp,
+    pdfLabel: 'TSBIE official: Political Science (Civics) I model question paper (EM · PDF)',
+    extraLinks: const [
+      NamedLink('TSBIE official: Political Science I study material / BLM (EM · PDF)', _civ1Blm),
+      NamedLink('TSBIE official: Political Science I annual plan & chapter weightage (PDF)', _apCiv1),
+      NamedLink('TSBIE model papers page — all subjects (official)', _biePapers),
+      NamedLink('TSBIE Board website — textbooks & e-content (official)', _bieHome),
+    ],
     chapters: const [
       Chapter('Introduction to Political Science', [
         'Political Science studies the State, government and political activity.',
@@ -410,8 +429,13 @@ final List<Subject> year1Subjects = [
     name: 'Accountancy - I',
     emoji: '🧾',
     year: 1,
-    pdfUrl: _accPdf,
-    pdfLabel: 'TOSS Accountancy Book (English Medium)',
+    pdfUrl: _comAcc1Blm,
+    pdfLabel: 'TSBIE official: Commerce & Accountancy I study material / BLM (EM · PDF)',
+    extraLinks: const [
+      NamedLink('TSBIE official: Commerce & Accountancy I annual plan & chapter weightage (PDF)', _apCom1),
+      NamedLink('TSBIE model papers page — all subjects (official)', _biePapers),
+      NamedLink('TSBIE Board website — textbooks & e-content (official)', _bieHome),
+    ],
     chapters: const [
       Chapter('Introduction to Accounting', [
         'Accounting = recording, classifying, summarising and interpreting financial transactions.',
@@ -534,11 +558,12 @@ final List<Subject> year1Subjects = [
     name: 'English - I',
     emoji: '🔤',
     year: 1,
-    pdfUrl: _engModel,
-    pdfLabel: 'Official English Model Paper + Blue Print (TOSS/TSBIE)',
+    pdfUrl: _eng1Mqp,
+    pdfLabel: 'TSBIE official: English I model question paper (PDF)',
     extraLinks: const [
-      NamedLink('English Blue Print (official)', _engBlueprint),
-      NamedLink('TSBIE portal - more textbooks', _tsbiePortal),
+      NamedLink('TSBIE official: English I annual plan & chapter weightage (PDF)', _apEng1),
+      NamedLink('TSBIE model papers page — all subjects (official)', _biePapers),
+      NamedLink('TSBIE Board website — textbooks & e-content (official)', _bieHome),
     ],
     chapters: const [
       Chapter('Reading Skills (Prose & Poetry)', [
@@ -648,11 +673,12 @@ final List<Subject> year1Subjects = [
     name: 'తెలుగు - I',
     emoji: '📖',
     year: 1,
-    pdfUrl: _telBlueprint,
-    pdfLabel: 'Official Telugu Blue Print + Model Paper (TOSS/TSBIE)',
+    pdfUrl: _tel1Mqp,
+    pdfLabel: 'TSBIE official: Telugu (second language) I model question paper (PDF)',
     extraLinks: const [
-      NamedLink('Telugu Model Paper (official)', _telModel),
-      NamedLink('TSBIE portal - more textbooks', _tsbiePortal),
+      NamedLink('TSBIE official: Telugu I annual plan & chapter weightage (PDF)', _apTel1),
+      NamedLink('TSBIE model papers page — all subjects (official)', _biePapers),
+      NamedLink('TSBIE Board website — textbooks & e-content (official)', _bieHome),
     ],
     chapters: const [
       Chapter('గద్యము (Prose)', [

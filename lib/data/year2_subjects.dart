@@ -1,23 +1,28 @@
 import '../models.dart';
 
-// Official free sources (Government of Telangana / TOSS).
-const String _eco2Pdf =
-    'https://www.telanganaopenschool.org/images/Inter_pdfs/318_Inter_Economics_EM.pdf';
-const String _com2Pdf =
-    'https://www.telanganaopenschool.org/images/Inter_pdfs/319_Commerce_Business_Studies_EM.pdf';
-const String _civ2Pdf =
-    'https://www.telanganaopenschool.org/images/Inter_pdfs/317_INTER_POLITICAL_SCIENCE_EM.pdf';
-const String _accPdf =
-    'https://www.telanganaopenschool.org/images/Inter_pdfs/Accountancy%20Book.pdf';
-const String _engModel =
-    'https://www.telanganaopenschool.org/images/ssc_pdfs/INTER_ENGLISH_Model_paper_2023.pdf';
-const String _engBlueprint =
-    'https://www.telanganaopenschool.org/images/ssc_pdfs/Inter_English_Language_Blue_Print_2023.pdf';
-const String _telModel =
-    'https://www.telanganaopenschool.org/images/ssc_pdfs/Telugu_Intermediate_model_paper_2023.pdf';
-const String _telBlueprint =
-    'https://www.telanganaopenschool.org/images/ssc_pdfs/Inter_Telugu_Language_Blue_Print_2023.pdf';
-const String _tsbiePortal = 'https://bie.tg.nic.in/';
+// ---------------------------------------------------------------------------
+// OFFICIAL PDF SOURCES — Telangana Board of Intermediate Education (TSBIE).
+// All documents below are hosted on the Board's own website: model question
+// papers (MQP), Basic Learning Material study PDFs (BLM) and annual plans
+// with chapter-wise weightage. No TOSS, no third-party websites.
+// ---------------------------------------------------------------------------
+const String _bieHome = 'https://tgbie.cgg.gov.in/';
+const String _biePapers = 'https://tgbie.cgg.gov.in/modelQuestionPapers.do';
+const String _c = 'https://tgbie.cgg.gov.in/scannedPhotos/Circulars';
+
+const String _eco2Mqp = '$_c/Economics_II_EM_MQP.pdf';
+const String _eco2Blm = '$_c/Economics_II_(EM)_BLM_21-22.pdf';
+const String _com2Mqp = '$_c/Commerce_II_EM_MQP.pdf';
+const String _comAcc2Blm = '$_c/Commerce_n_Accts_II_(BLM)_21-22_(EM).pdf';
+const String _civ2Mqp = '$_c/Political_Science_(Civics)_II_(EM)_MQP.pdf';
+const String _eng2Mqp = '$_c/English_II_MQP.pdf';
+const String _tel2Mqp = '$_c/Telugu_II_SL_MQP.pdf';
+const String _apEco2 = '$_c/Annual_Plan_Economics_2nd_Year.pdf';
+const String _apCom2 = '$_c/Annual_Plan_Commer_%26_Accountancy_2nd_Year.pdf';
+const String _apCiv2 = '$_c/Annual_Plan_Political_Science_2nd_Year.pdf';
+const String _apEng2 = '$_c/Annual_Plan_English_2nd_Year.pdf';
+const String _apTel2 = '$_c/Annual_Plan_Telugu_2nd_Year.pdf';
+
 
 /// All six Inter SECOND year subjects (English medium).
 final List<Subject> year2Subjects = [
@@ -27,8 +32,14 @@ final List<Subject> year2Subjects = [
     name: 'Economics - II',
     emoji: '📊',
     year: 2,
-    pdfUrl: _eco2Pdf,
-    pdfLabel: 'TOSS Intermediate Economics (English Medium)',
+    pdfUrl: _eco2Mqp,
+    pdfLabel: 'TSBIE official: Economics II model question paper (EM · PDF)',
+    extraLinks: const [
+      NamedLink('TSBIE official: Economics II study material / BLM (EM · PDF)', _eco2Blm),
+      NamedLink('TSBIE official: Economics II annual plan & chapter weightage (PDF)', _apEco2),
+      NamedLink('TSBIE model papers page — all subjects (official)', _biePapers),
+      NamedLink('TSBIE Board website — textbooks & e-content (official)', _bieHome),
+    ],
     chapters: const [
       Chapter('Economic Growth and Development', [
         'Growth = rise in national income/output; Development = growth + structural & welfare changes.',
@@ -151,8 +162,14 @@ final List<Subject> year2Subjects = [
     name: 'Commerce - II',
     emoji: '🏦',
     year: 2,
-    pdfUrl: _com2Pdf,
-    pdfLabel: 'TOSS Commerce / Business Studies (English Medium)',
+    pdfUrl: _com2Mqp,
+    pdfLabel: 'TSBIE official: Commerce II model question paper (EM · PDF)',
+    extraLinks: const [
+      NamedLink('TSBIE official: Commerce & Accountancy II study material / BLM (EM · PDF)', _comAcc2Blm),
+      NamedLink('TSBIE official: Commerce & Accountancy II annual plan & chapter weightage (PDF)', _apCom2),
+      NamedLink('TSBIE model papers page — all subjects (official)', _biePapers),
+      NamedLink('TSBIE Board website — textbooks & e-content (official)', _bieHome),
+    ],
     chapters: const [
       Chapter('Management - Nature, Principles and Functions', [
         'Management = getting things done through others efficiently and effectively.',
@@ -272,8 +289,13 @@ final List<Subject> year2Subjects = [
     name: 'Civics - II',
     emoji: '🏛️',
     year: 2,
-    pdfUrl: _civ2Pdf,
-    pdfLabel: 'TOSS Political Science (English Medium)',
+    pdfUrl: _civ2Mqp,
+    pdfLabel: 'TSBIE official: Political Science (Civics) II model question paper (EM · PDF)',
+    extraLinks: const [
+      NamedLink('TSBIE official: Political Science II annual plan & chapter weightage (PDF)', _apCiv2),
+      NamedLink('TSBIE model papers page — all subjects (official)', _biePapers),
+      NamedLink('TSBIE Board website — textbooks & e-content (official)', _bieHome),
+    ],
     chapters: const [
       Chapter('Indian Constitution - Salient Features', [
         'Longest written constitution in the world (adopted 26 Nov 1949, in force 26 Jan 1950).',
@@ -397,8 +419,13 @@ final List<Subject> year2Subjects = [
     name: 'Accountancy - II',
     emoji: '📒',
     year: 2,
-    pdfUrl: _accPdf,
-    pdfLabel: 'TOSS Accountancy Book (English Medium)',
+    pdfUrl: _comAcc2Blm,
+    pdfLabel: 'TSBIE official: Commerce & Accountancy II study material / BLM (EM · PDF)',
+    extraLinks: const [
+      NamedLink('TSBIE official: Commerce & Accountancy II annual plan & chapter weightage (PDF)', _apCom2),
+      NamedLink('TSBIE model papers page — all subjects (official)', _biePapers),
+      NamedLink('TSBIE Board website — textbooks & e-content (official)', _bieHome),
+    ],
     chapters: const [
       Chapter('Depreciation, Provisions and Reserves', [
         'Depreciation = fall in value of fixed assets due to use, wear & tear, obsolescence.',
@@ -518,11 +545,12 @@ final List<Subject> year2Subjects = [
     name: 'English - II',
     emoji: '📚',
     year: 2,
-    pdfUrl: _engModel,
-    pdfLabel: 'Official English Model Paper + Blue Print (TOSS/TSBIE)',
+    pdfUrl: _eng2Mqp,
+    pdfLabel: 'TSBIE official: English II model question paper (PDF)',
     extraLinks: const [
-      NamedLink('English Blue Print (official)', _engBlueprint),
-      NamedLink('TSBIE portal - more textbooks', _tsbiePortal),
+      NamedLink('TSBIE official: English II annual plan & chapter weightage (PDF)', _apEng2),
+      NamedLink('TSBIE model papers page — all subjects (official)', _biePapers),
+      NamedLink('TSBIE Board website — textbooks & e-content (official)', _bieHome),
     ],
     chapters: const [
       Chapter('Reading Comprehension (Advanced)', [
@@ -632,11 +660,12 @@ final List<Subject> year2Subjects = [
     name: 'తెలుగు - II',
     emoji: '🪶',
     year: 2,
-    pdfUrl: _telBlueprint,
-    pdfLabel: 'Official Telugu Blue Print + Model Paper (TOSS/TSBIE)',
+    pdfUrl: _tel2Mqp,
+    pdfLabel: 'TSBIE official: Telugu (second language) II model question paper (PDF)',
     extraLinks: const [
-      NamedLink('Telugu Model Paper (official)', _telModel),
-      NamedLink('TSBIE portal - more textbooks', _tsbiePortal),
+      NamedLink('TSBIE official: Telugu II annual plan & chapter weightage (PDF)', _apTel2),
+      NamedLink('TSBIE model papers page — all subjects (official)', _biePapers),
+      NamedLink('TSBIE Board website — textbooks & e-content (official)', _bieHome),
     ],
     chapters: const [
       Chapter('గద్యము - II (Prose)', [

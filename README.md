@@ -4,9 +4,11 @@
 (CEC stream + Languages — English Medium, Inter 1st & 2nd Year)
 
 Built with **Flutter** (Android) + optional **Google Gemini (free tier)** for live AI features.
-All six subjects included: **Economics, Commerce, Civics, Accountancy, English, తెలుగు** — with official free Govt. of Telangana textbook PDFs linked inside the app.
+All six subjects included: **Economics, Commerce, Civics, Accountancy, English, తెలుగు** — with **official TSBIE model papers, BLM study material and annual-plan PDFs** linked inside the app, direct from the Telangana Board of Intermediate Education. **No TOSS, no third-party websites.**
 
-> 🆕 **v1.2.0 — Real Exam Q&A Booster:** the question bank now carries **real board-pattern long answers (5/10-mark essays) covering EVERY chapter** of all 12 subjects (Inter 1st & 2nd year), plus extra 2/4-mark questions. 225 curated Q&A entries in total.
+> 🆕 **v1.3.0 — Student Productivity Update:** official **TSBIE PDFs** (model question papers + BLM study material + annual plans, English medium), 🃏 **Flashcards** with priority/saved/pending sets, 🔍 **global Search**, 🔖 **Bookmarks**, ✅ **learned-question tracker** with subject progress bars, 🔥 **study streak + IPE exam countdown**, 🔊 **Listen** button on every Q&A, ⭐ **Board Priority filter**, and 🌙 **dark mode**.
+>
+> **v1.2.0 — Real Exam Q&A Booster:** the question bank now carries **real board-pattern long answers (5/10-mark essays) covering EVERY chapter** of all 12 subjects (Inter 1st & 2nd year), plus extra 2/4-mark questions. 225 curated Q&A entries in total.
 
 ---
 
@@ -24,22 +26,34 @@ All six subjects included: **Economics, Commerce, Civics, Accountancy, English, 
 | 8 | 🔊 **Hear answers** — text-to-speech reads tutor replies aloud | ✅ / 🔑 |
 | 9 | ✍️ **Exam Answer Writer** — pick 2/5/10 marks, get board-style model answers (offline fuzzy-match bank + live AI) | ✅ / 🔑 |
 | 10 | 🔤 **Vocabulary builder** — 110 words with Telugu meanings, flashcards, meaning quiz, learned-progress | ✅ |
-| 11 | 📄 **Official textbook PDFs** — opens Govt. of Telangana TOSS textbooks & model papers/blue prints in-app links | ✅ |
+| 11 | 📄 **Official TSBIE PDFs** — model question papers, BLM study material & annual plans hosted by the exam board itself (no third-party sites) | ✅ |
 | 12 | 🔑 **Bring-your-own Gemini key** — free key, stored only on the device | ✅ |
+| 13 | 🃏 **Flashcards** — flip-card revision with ⭐ priority / 🔖 saved / ❌ pending sets, shuffle & Listen | ✅ |
+| 14 | 🔍 **Global Search** — find any question across all 6 subjects instantly | ✅ |
+| 15 | 🔖 **Bookmarks + ✅ Learned tracker** — save tough questions, mark learned ones, per-subject progress bars | ✅ |
+| 16 | 🔥 **Study streak + ⏳ exam countdown** — daily motivation on Home & dashboard | ✅ |
+| 17 | 🔊 **Listen to any Q&A** — one-tap text-to-speech on every question (TalkBack-first design) | ✅ |
+| 18 | ⭐ **Board Priority filter** — auto-picks must-do questions spread across every chapter | ✅ |
+| 19 | 🌙 **Dark mode** — system / light / dark choice in Settings | ✅ |
 
-## 📖 Subjects & Official Sources
+## 📖 Subjects & Official TSBIE Sources
 
-| Subject (both years) | Official free source (Govt. of Telangana) |
+Every PDF below is hosted on the **official Telangana Board of Intermediate Education (TSBIE)** website — model question papers (MQP), Basic Learning Material (BLM) and annual plans (chapter-wise weightage). No TOSS, no third-party websites.
+
+| Subject | Official TSBIE PDFs (English medium) |
 |---|---|
-| Economics I & II | [TOSS Economics EM PDF](https://www.telanganaopenschool.org/images/Inter_pdfs/318_Inter_Economics_EM.pdf) |
-| Commerce I & II | [TOSS Commerce/Business Studies EM PDF](https://www.telanganaopenschool.org/images/Inter_pdfs/319_Commerce_Business_Studies_EM.pdf) |
-| Civics I & II | [TOSS Political Science EM PDF](https://www.telanganaopenschool.org/images/Inter_pdfs/317_INTER_POLITICAL_SCIENCE_EM.pdf) |
-| Accountancy I & II | [TOSS Accountancy PDF](https://www.telanganaopenschool.org/images/Inter_pdfs/Accountancy%20Book.pdf) |
-| English I & II | [Blue Print](https://www.telanganaopenschool.org/images/ssc_pdfs/Inter_English_Language_Blue_Print_2023.pdf) • [Model Paper](https://www.telanganaopenschool.org/images/ssc_pdfs/INTER_ENGLISH_Model_paper_2023.pdf) |
-| Telugu I & II | [Blue Print](https://www.telanganaopenschool.org/images/ssc_pdfs/Inter_Telugu_Language_Blue_Print_2023.pdf) • [Model Paper](https://www.telanganaopenschool.org/images/ssc_pdfs/Telugu_Intermediate_model_paper_2023.pdf) |
+| Economics I | [Model paper](https://tgbie.cgg.gov.in/scannedPhotos/Circulars/Economics_I_EM_MQP.pdf) · [BLM study material](https://tgbie.cgg.gov.in/scannedPhotos/Circulars/Economics_I_%28EM%29_BLM_%282021-22%29.pdf) · [Annual plan](https://tgbie.cgg.gov.in/scannedPhotos/Circulars/Annual_Plan_Economics_1st_Year.pdf) |
+| Economics II | [Model paper](https://tgbie.cgg.gov.in/scannedPhotos/Circulars/Economics_II_EM_MQP.pdf) · [BLM study material](https://tgbie.cgg.gov.in/scannedPhotos/Circulars/Economics_II_%28EM%29_BLM_21-22.pdf) · [Annual plan](https://tgbie.cgg.gov.in/scannedPhotos/Circulars/Annual_Plan_Economics_2nd_Year.pdf) |
+| Commerce I | [Model paper](https://tgbie.cgg.gov.in/scannedPhotos/Circulars/Commerce_I_EM_MQP.pdf) · [BLM study material](https://tgbie.cgg.gov.in/scannedPhotos/Circulars/Commerce_n_Accountancy_I_%28EM%29_BLM_2021-22.pdf) · [Annual plan](https://tgbie.cgg.gov.in/scannedPhotos/Circulars/Annual_Plan_Commer_%26_Accountancy_1st_Year.pdf) |
+| Commerce II | [Model paper](https://tgbie.cgg.gov.in/scannedPhotos/Circulars/Commerce_II_EM_MQP.pdf) · [BLM study material](https://tgbie.cgg.gov.in/scannedPhotos/Circulars/Commerce_n_Accts_II_%28BLM%29_21-22_%28EM%29.pdf) · [Annual plan](https://tgbie.cgg.gov.in/scannedPhotos/Circulars/Annual_Plan_Commer_%26_Accountancy_2nd_Year.pdf) |
+| Civics I | [Model paper](https://tgbie.cgg.gov.in/scannedPhotos/Circulars/Political_Science_%28Civics%29_I_EM_MQP.pdf) · [BLM study material](https://tgbie.cgg.gov.in/scannedPhotos/Circulars/Political_Science_I_%28EM%29_BLM_2021-22_FINAL_%281%29.pdf) · [Annual plan](https://tgbie.cgg.gov.in/scannedPhotos/Circulars/Annual_Plan_Political_Science_1st_Year.pdf) |
+| Civics II | [Model paper](https://tgbie.cgg.gov.in/scannedPhotos/Circulars/Political_Science_%28Civics%29_II_%28EM%29_MQP.pdf) · [Annual plan](https://tgbie.cgg.gov.in/scannedPhotos/Circulars/Annual_Plan_Political_Science_2nd_Year.pdf) |
+| Accountancy I & II | [BLM I year](https://tgbie.cgg.gov.in/scannedPhotos/Circulars/Commerce_n_Accountancy_I_%28EM%29_BLM_2021-22.pdf) · [BLM II year](https://tgbie.cgg.gov.in/scannedPhotos/Circulars/Commerce_n_Accts_II_%28BLM%29_21-22_%28EM%29.pdf) · [Annual plan](https://tgbie.cgg.gov.in/scannedPhotos/Circulars/Annual_Plan_Commer_%26_Accountancy_1st_Year.pdf) |
+| English I & II | [Model paper I](https://tgbie.cgg.gov.in/scannedPhotos/Circulars/English_I_MQP.pdf) · [Model paper II](https://tgbie.cgg.gov.in/scannedPhotos/Circulars/English_II_MQP.pdf) · [Annual plan I](https://tgbie.cgg.gov.in/scannedPhotos/Circulars/Annual_Plan_English_1st_Year.pdf) · [Annual plan II](https://tgbie.cgg.gov.in/scannedPhotos/Circulars/Annual_Plan_English_2nd_Year.pdf) |
+| Telugu I & II | [Model paper I](https://tgbie.cgg.gov.in/scannedPhotos/Circulars/Telugu_I_SL_MQP.pdf) · [Model paper II](https://tgbie.cgg.gov.in/scannedPhotos/Circulars/Telugu_II_SL_MQP.pdf) · [Annual plan I](https://tgbie.cgg.gov.in/scannedPhotos/Circulars/Annual_Plan_Telugu_1st_Year.pdf) · [Annual plan II](https://tgbie.cgg.gov.in/scannedPhotos/Circulars/Annual_Plan_Telugu_2nd_Year.pdf) |
 
-> Full lists: [TOSS Inter Textbooks](https://www.telanganaopenschool.org/Intertextbooks.aspx) · [Model Papers & Blue Prints](https://www.telanganaopenschool.org/Inter_Model_QP_Blueprint.aspx) · [TSBIE](https://bie.tg.nic.in/)
-> PDFs are **linked** from official government sites — the app never re-hosts copyrighted material.
+> Board pages: [TSBIE official website](https://tgbie.cgg.gov.in/) · [TSBIE model question papers page](https://tgbie.cgg.gov.in/modelQuestionPapers.do)
+> PDFs are **linked** from the official board website — the app never re-hosts copyrighted material.
 
 ---
 
@@ -89,31 +103,42 @@ lib/
 │   ├── year2_subjects.dart    # Inter 2nd yr: 6 subjects, chapters, Q&A, MCQs
 │   └── vocabulary.dart        # 110 words + Telugu meanings
 ├── services/
-│   ├── app_state.dart         # persisted state (key, scores, learned words)
+│   ├── app_state.dart         # persisted state (key, scores, bookmarks, learned, streak, theme)
 │   ├── gemini_service.dart    # Gemini REST client with model fallbacks
 │   └── speech_service.dart    # mic (speech_to_text) + voice (flutter_tts)
+├── utils/
+│   └── study_utils.dart       # qaKey ids + priority-set selection (unit tested)
+├── widgets/
+│   └── qa_tile.dart           # shared question card (Listen 🔊 / Save 🔖 / Learned ✅)
 └── screens/
-    ├── home_screen.dart       # dashboard + year toggle
-    ├── subjects_screen.dart   # 6 subjects
-    ├── chapter_screen.dart    # Learn | Questions | Textbook tabs
+    ├── home_screen.dart       # dashboard (streak, countdown, progress) + year toggle
+    ├── subjects_screen.dart   # 6 subjects with learned-progress bars
+    ├── chapter_screen.dart    # Learn | Questions (smart filters) | Official TSBIE PDFs
+    ├── flashcards_screen.dart # flip-card revision (priority/saved/pending + shuffle + Listen)
+    ├── search_screen.dart     # global question search
+    ├── bookmarks_screen.dart  # all saved questions, grouped by subject
+    ├── progress_screen.dart   # streak, countdown, per-subject %, quiz bests
     ├── quiz_home_screen.dart  # pick subject
     ├── quiz_screen.dart       # MCQ player + AI question generator
     ├── tutor_screen.dart      # AI chat: Doubt Solver / ELI5, mic + TTS
     ├── exam_answer_screen.dart# 2/5/10-mark model answers
     ├── vocab_screen.dart      # flashcards + meaning quiz + AI words
-    └── settings_screen.dart   # key, voice, official links, reset
+    └── settings_screen.dart   # key, voice, theme, official links, reset
 ```
 
 ## 🚧 Roadmap
 
+- [x] Daily study streak & exam countdown
+- [x] Flashcards (priority / saved / pending sets)
+- [x] Dark mode
+- [ ] Spaced-repetition scheduler for flashcards
 - [ ] More chapters + previous-year question papers per subject
 - [ ] Telugu Medium content toggle
-- [ ] Spaced-repetition flashcard scheduler
-- [ ] Daily streaks & study reminders
 - [ ] iOS build (`flutter create --platforms=ios .`)
 
 ## ⚖️ License & fair use
 
 MIT License (code). Study content is compiled for educational purposes aligned to the
-TSBIE/TOSS syllabus; textbooks remain property of Govt. of Telangana and are linked, not re-hosted.
-This is an independent student project — not affiliated with TSBIE/TOSS/SCERT.
+TSBIE syllabus; model papers & study material remain property of the Board of Intermediate
+Education, Telangana and are linked, not re-hosted.
+This is an independent student project — not affiliated with TSBIE or SCERT.

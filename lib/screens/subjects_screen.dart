@@ -26,16 +26,35 @@ class SubjectsScreen extends StatelessWidget {
         itemCount: subjects.length,
         itemBuilder: (context, i) {
           final s = subjects[i];
+          final total = s.shortAnswers.length + s.essays.length;
+          final learned = state.learnedCountFor(s.id);
+          final pct = total == 0 ? 0.0 : learned / total;
           return Card(
             child: ListTile(
               leading: Text(s.emoji, style: const TextStyle(fontSize: 30)),
               title: Text(s.name,
                   style: const TextStyle(fontWeight: FontWeight.w600)),
-              subtitle: Text(
-                  '${s.chapters.length} units • ${s.shortAnswers.length} short Qs • ${s.mcqs.length} MCQs'),
+              subtitle: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                      '${s.chapters.length} units • ${s.shortAnswers.length} short Qs • ${s.mcqs.length} MCQs'),
+                  const SizedBox(height: 6),
+                  Semantics(
+                    label:
+                        '$learned of $total questions learned, ${(pct * 100).round()} percent',
+                    child: LinearProgressIndicator(
+                        value: pct, minHeight: 6),
+                  ),
+                  const SizedBox(height: 2),
+                  Text('✅ $learned / $total learned'
+                      '${state.bookmarkCountFor(s.id) > 0 ? '  •  🔖 ${state.bookmarkCountFor(s.id)}' : ''}'),
+                ],
+              ),
+              isThreeLine: true,
               trailing: Wrap(spacing: 4, children: [
                 IconButton(
-                  tooltip: 'Open official textbook PDF',
+                  tooltip: 'Open official TSBIE PDF',
                   icon: const Icon(Icons.picture_as_pdf_outlined),
                   onPressed: () => launchUrl(Uri.parse(s.pdfUrl),
                       mode: LaunchMode.externalApplication),

@@ -6,11 +6,10 @@ import '../models.dart';
 import '../services/app_state.dart';
 
 const _links = [
-  NamedLink('🌐 TOSS Inter Textbooks (official page)',
-      'https://www.telanganaopenschool.org/Intertextbooks.aspx'),
-  NamedLink('📝 TOSS Model Papers & Blue Prints',
-      'https://www.telanganaopenschool.org/Inter_Model_QP_Blueprint.aspx'),
-  NamedLink('🏫 TSBIE - Board of Intermediate Education', 'https://bie.tg.nic.in/'),
+  NamedLink('🏛️ TSBIE — Board of Intermediate Education (official website)',
+      'https://tgbie.cgg.gov.in/'),
+  NamedLink('📄 TSBIE model question papers page — all subjects',
+      'https://tgbie.cgg.gov.in/modelQuestionPapers.do'),
   NamedLink('🔑 Google AI Studio - free Gemini key',
       'https://aistudio.google.com/app/apikey'),
 ];
@@ -115,6 +114,40 @@ class _SettingsScreenState extends State<SettingsScreen> {
           ),
         ),
 
+        // ---- Theme ----
+        Card(
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child:
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Text('Appearance',
+                  style: Theme.of(context)
+                      .textTheme
+                      .titleSmall
+                      ?.copyWith(fontWeight: FontWeight.bold)),
+              const SizedBox(height: 10),
+              SegmentedButton<ThemeMode>(
+                segments: const [
+                  ButtonSegment(
+                      value: ThemeMode.system,
+                      icon: Icon(Icons.brightness_auto_outlined),
+                      label: Text('Auto')),
+                  ButtonSegment(
+                      value: ThemeMode.light,
+                      icon: Icon(Icons.light_mode_outlined),
+                      label: Text('Light')),
+                  ButtonSegment(
+                      value: ThemeMode.dark,
+                      icon: Icon(Icons.dark_mode_outlined),
+                      label: Text('Dark')),
+                ],
+                selected: {state.themeMode},
+                onSelectionChanged: (s) => state.setThemeMode(s.first),
+              ),
+            ]),
+          ),
+        ),
+
         // ---- Official sources ----
         Padding(
           padding: const EdgeInsets.fromLTRB(16, 14, 16, 4),
@@ -141,12 +174,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
           child: Column(children: [
             const ListTile(
               leading: Icon(Icons.info_outline),
-              title: Text('Inter AI Study Buddy v1.0'),
+              title: Text('Inter AI Study Buddy v1.3.0'),
               subtitle: Text(
                   'Courses: Commerce • Economics • Civics • Accountancy • '
                   'Telugu • English (Inter 1st & 2nd year, English medium).\n'
-                  'Textbook PDFs are linked (not re-hosted) from official '
-                  'Government of Telangana websites.'),
+                  'Model papers & study material open directly from the '
+                  'official Telangana Board of Intermediate Education (TSBIE) '
+                  '— no third-party websites.\n'
+                  'New: flashcards, search, bookmarks, learned tracker, '
+                  'streak, exam countdown & dark mode.'),
             ),
             TextButton.icon(
               onPressed: () async {
