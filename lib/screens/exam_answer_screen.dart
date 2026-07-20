@@ -118,7 +118,8 @@ class _ExamAnswerScreenState extends State<ExamAnswerScreen> {
   Widget build(BuildContext context) {
     final state = context.watch<AppState>();
     final subjects = subjectsForYear(state.year);
-    _subject ??= null;
+    // If the year changed, make sure the selected subject still exists in the list.
+    if (_subject != null && !subjects.contains(_subject)) _subject = null;
     return Scaffold(
       appBar: AppBar(title: const Text('Exam Answer Writer ✍️')),
       body: ListView(
