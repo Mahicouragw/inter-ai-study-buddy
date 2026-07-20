@@ -34,10 +34,13 @@ jobs:
           print('Manifest patched')
           EOF
       - run: flutter build apk --debug
+      - name: Give the APK a friendly name
+        run: cp build/app/outputs/flutter-apk/app-debug.apk build/app/outputs/flutter-apk/InterAIStudyBuddy.apk
+
       - name: Publish release via REST with retries
         run: python3 .github/scripts/release_apk.py
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          APK_PATH: build/app/outputs/flutter-apk/app-debug.apk
+          APK_PATH: build/app/outputs/flutter-apk/InterAIStudyBuddy.apk
           TAG_BASE: flutter-apk
           RELEASE_NAME: Inter AI Study Buddy APK
