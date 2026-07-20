@@ -1,0 +1,43 @@
+name: Retry APK Release
+
+permissions:
+  contents: write
+
+on:
+  workflow_dispatch:
+
+jobs:
+  rebuild-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - run: flutter pub get
+      - run: flutter create --platforms=android .
+      - name: Add mic & internet permissions
+        run: |
+          python3 - <<'EOF'
+          p = 'android/app/src/main/AndroidManifest.xml'
+          s = open(p).read()
+          perms = ('    <uses-permission android:name="android.permission.INTERNET"/>\n'
+                   '    <uses-permission android:name="android.permission.RECORD_AUDIO"/>\n')
+          if 'RECORD_AUDIO' not in s:
+              s = s.replace('<application', perms + '    <application', 1)
+          open(p, 'w').write(s)
+          print('Manifest patched')
+          EOF
+      - run: flutter build apk --debug
+      - name: Publish release via REST with retries
+        run: python3 .github/scripts/release_apk.py
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          APK_PATH: build/app/outputs/flutter-apk/app-debug.apk
+          TAG_BASE: flutter-apk
+          RELEASE_NAME: Inter AI Study Buddy APK
