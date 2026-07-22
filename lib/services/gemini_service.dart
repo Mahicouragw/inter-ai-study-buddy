@@ -66,7 +66,7 @@ class GeminiService {
     final uri = Uri.parse('https://openrouter.ai/api/v1/chat/completions');
     
     // Default model - good balance for study buddy: gpt-4o-mini is fast & cheap, or use claude-3.5-sonnet for better reasoning
-    const model = 'anthropic/claude-3-opus'; // can also be 'anthropic/claude-3.5-sonnet' or 'google/gemini-2.0-flash-001'
+    const model = 'anthropic/claude-opus-4.5'; // can also be 'anthropic/claude-3.5-sonnet' or 'google/gemini-2.0-flash-001'
     
     final messages = <Map<String, String>>[];
     if (system != null && system.isNotEmpty) {
