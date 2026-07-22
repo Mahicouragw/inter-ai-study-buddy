@@ -14,6 +14,7 @@ class _Msg {
 
 /// Chat with the AI tutor: doubt solving + "Explain Like I'm 5" mode,
 /// with voice input (mic) and read-aloud replies (TTS).
+/// Now supports both Gemini (AIza...) and OpenRouter (sk-or-v1-...) keys.
 class TutorScreen extends StatefulWidget {
   const TutorScreen({super.key});
 
@@ -28,7 +29,8 @@ class _TutorScreenState extends State<TutorScreen> {
     _Msg(
         'Namaste! 🙏 I am Sahay, your AI study buddy. Ask me any doubt from '
         'Commerce, Economics, Civics, Accountancy, Telugu or English. '
-        'Tap 🧒 ELI5 to make me explain like you are 5 years old!',
+        'Tap 🧒 ELI5 to make me explain like you are 5 years old! '
+        'Now powered by OpenRouter (GPT-4o/Claude/Gemini) or Gemini Free.',
         false),
   ];
   String _mode = 'doubt'; // or 'eli5'
@@ -80,9 +82,10 @@ class _TutorScreenState extends State<TutorScreen> {
     if (!state.hasKey) {
       setState(() {
         _messages.add(_Msg(
-            'I need a free Google Gemini key to answer live. ⚙️ Go to Settings '
-            '→ get a free key at aistudio.google.com → paste it here. '
-            'Meanwhile, browse Subjects for offline Q&A!',
+            'I need an API key to answer live. ⚙️ Go to Settings:\n'
+            '• For OpenRouter (Recommended, GPT-4o/Claude): openrouter.ai/keys → create key (sk-or-v1-...)\n'
+            '• For Gemini Free: aistudio.google.com → Get free key (AIza...)\n'
+            'Paste it in Settings → Save. Meanwhile, browse Subjects for offline Q&A!',
             false));
         _sending = false;
       });
@@ -137,9 +140,10 @@ class _TutorScreenState extends State<TutorScreen> {
   @override
   Widget build(BuildContext context) {
     final state = context.watch<AppState>();
+    final isOR = state.geminiKey.trim().startsWith('sk-or-');
     return Scaffold(
       appBar: AppBar(
-        title: const Text('AI Tutor 🤖'),
+        title: Text('AI Tutor 🤖 ${isOR ? "(GPT-4o)" : ""}'),
         actions: [
           IconButton(
             tooltip: state.ttsEnabled ? 'Turn off voice replies' : 'Turn on voice replies',
@@ -166,6 +170,10 @@ class _TutorScreenState extends State<TutorScreen> {
               selected: _mode == 'eli5',
               onSelected: (_) => setState(() => _mode = 'eli5'),
             ),
+            if (isOR) ...[
+              const SizedBox(width: 10),
+              Chip(label: Text('OpenRouter GPT-4o', style: TextStyle(fontSize: 10)), backgroundColor: Colors.green.shade100),
+            ],
           ]),
         ),
         if (!state.hasKey)
@@ -175,7 +183,7 @@ class _TutorScreenState extends State<TutorScreen> {
               dense: true,
               leading: const Icon(Icons.key_outlined),
               title: const Text('Live AI is locked'),
-              subtitle: const Text('Add a free Gemini key to chat.'),
+              subtitle: const Text('Add OpenRouter (sk-or-v1-...) or Gemini key.'),
               trailing: TextButton(
                 onPressed: () => Navigator.push(
                     context,
@@ -193,7 +201,7 @@ class _TutorScreenState extends State<TutorScreen> {
             itemCount: _messages.length + (_sending ? 1 : 0),
             itemBuilder: (context, i) {
               if (i == _messages.length) {
-                return const _Bubble(text: 'Sahay is thinking… ✏️', isUser: false);
+                return const _Bubble(text: 'Sahay is thinking… ✏️ (via OpenRouter/Gemini)', isUser: false);
               }
               final m = _messages[i];
               return _Bubble(text: m.text, isUser: m.isUser);
@@ -225,7 +233,7 @@ class _TutorScreenState extends State<TutorScreen> {
                   decoration: InputDecoration(
                     hintText: _mode == 'eli5'
                         ? 'Topic to explain like you\'re 5…'
-                        : 'Type or 🎤 speak your doubt…',
+                        : 'Type or 🎤 speak your doubt… (GPT-4o/Claude/Gemini)',
                     contentPadding: const EdgeInsets.symmetric(
                         horizontal: 14, vertical: 10),
                   ),

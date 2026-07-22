@@ -12,6 +12,8 @@ const _links = [
       'https://tgbie.cgg.gov.in/modelQuestionPapers.do'),
   NamedLink('🔑 Google AI Studio - free Gemini key',
       'https://aistudio.google.com/app/apikey'),
+  NamedLink('🌐 OpenRouter - 300+ models via one key (Recommended)',
+      'https://openrouter.ai/keys'),
 ];
 
 class SettingsScreen extends StatefulWidget {
@@ -37,13 +39,20 @@ class _SettingsScreenState extends State<SettingsScreen> {
     super.dispose();
   }
 
+  bool _isOpenRouterKey(String key) => key.trim().startsWith('sk-or-v1-') || key.trim().startsWith('sk-or-');
+  bool _isGeminiKey(String key) => key.trim().startsWith('AIza');
+
   @override
   Widget build(BuildContext context) {
     final state = context.watch<AppState>();
+    final currentKey = state.geminiKey.trim();
+    final isOR = _isOpenRouterKey(currentKey);
+    final isGem = _isGeminiKey(currentKey);
+    
     return Scaffold(
       appBar: AppBar(title: const Text('Settings ⚙️')),
       body: ListView(padding: const EdgeInsets.symmetric(vertical: 8), children: [
-        // ---- Gemini key ----
+        // ---- AI key ----
         Card(
           child: Padding(
             padding: const EdgeInsets.all(16),
@@ -56,8 +65,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 Expanded(
                   child: Text(
                       state.hasKey
-                          ? 'AI Tutor is ACTIVE ✅'
-                          : 'Live AI needs a free Gemini key',
+                          ? isOR 
+                              ? 'AI Tutor ACTIVE via OpenRouter ✅ (GPT-4o/Claude)'
+                              : isGem
+                                  ? 'AI Tutor ACTIVE via Gemini ✅'
+                                  : 'AI Tutor ACTIVE ✅'
+                          : 'Live AI needs API key',
                       style: Theme.of(context)
                           .textTheme
                           .titleSmall
@@ -66,18 +79,32 @@ class _SettingsScreenState extends State<SettingsScreen> {
               ]),
               const SizedBox(height: 8),
               const Text(
-                  '1. Open aistudio.google.com → sign in → "Get API key" (free)\n'
-                  '2. Copy the key and paste it below\n'
-                  '3. It is saved ONLY on this phone - never uploaded anywhere'),
+                  '✨ NEW: Now supports OpenRouter (sk-or-v1-...) - one key for 300+ models including GPT-4o, Claude 3.5, Gemini 2.0!\n\n'
+                  'Option 1 - OpenRouter (Recommended):\n'
+                  '1. Open openrouter.ai/keys → sign in → Create key (free credits)\n'
+                  '2. Copy key starting with sk-or-v1-...\n'
+                  '3. Paste below → works for all AI models\n\n'
+                  'Option 2 - Gemini Free:\n'
+                  '1. Open aistudio.google.com → Get API key (free)\n'
+                  '2. Copy key starting with AIza...\n'
+                  '3. Paste below\n\n'
+                  'Key saved ONLY on this phone - never uploaded.'),
               const SizedBox(height: 10),
               TextField(
                 controller: _keyController,
                 obscureText: true,
-                decoration: const InputDecoration(
-                  labelText: 'Gemini API key',
-                  hintText: 'AIza…',
-                  prefixIcon: Icon(Icons.vpn_key_outlined),
+                maxLines: 2,
+                decoration: InputDecoration(
+                  labelText: 'API Key (Gemini AIza... or OpenRouter sk-or-v1-...)',
+                  hintText: 'sk-or-v1-... or AIza...',
+                  prefixIcon: const Icon(Icons.vpn_key_outlined),
+                  helperText: _keyController.text.trim().startsWith('sk-or-v1-') 
+                      ? '✅ OpenRouter key detected - will use GPT-4o-mini' 
+                      : _keyController.text.trim().startsWith('AIza')
+                          ? '✅ Gemini key detected'
+                          : 'Enter OpenRouter or Gemini key',
                 ),
+                onChanged: (_) => setState(() {}),
               ),
               const SizedBox(height: 10),
               Row(children: [
@@ -85,20 +112,57 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   onPressed: () {
                     state.setGeminiKey(_keyController.text);
                     ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text('Key saved on device ✅')));
+                        SnackBar(content: Text(
+                          _isOpenRouterKey(_keyController.text) 
+                              ? 'OpenRouter key saved ✅ (GPT-4o enabled)' 
+                              : 'Gemini key saved ✅'
+                        )));
+                    setState(() {});
                   },
                   icon: const Icon(Icons.save_outlined),
                   label: const Text('Save Key'),
                 ),
-                const SizedBox(width: 10),
-                TextButton.icon(
-                  onPressed: () => launchUrl(
-                      Uri.parse('https://aistudio.google.com/app/apikey'),
-                      mode: LaunchMode.externalApplication),
-                  icon: const Icon(Icons.open_in_new, size: 18),
-                  label: const Text('Get free key'),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: Wrap(spacing: 8, children: [
+                    TextButton.icon(
+                      onPressed: () => launchUrl(
+                          Uri.parse('https://openrouter.ai/keys'),
+                          mode: LaunchMode.externalApplication),
+                      icon: const Icon(Icons.open_in_new, size: 18),
+                      label: const Text('Get OpenRouter'),
+                    ),
+                    TextButton.icon(
+                      onPressed: () => launchUrl(
+                          Uri.parse('https://aistudio.google.com/app/apikey'),
+                          mode: LaunchMode.externalApplication),
+                      icon: const Icon(Icons.open_in_new, size: 18),
+                      label: const Text('Get Gemini'),
+                    ),
+                  ]),
                 ),
               ]),
+              if (state.hasKey) ...[
+                const SizedBox(height: 10),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    color: Colors.green.withOpacity(0.1),
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(color: Colors.green.withOpacity(0.3)),
+                  ),
+                  child: Row(children: [
+                    const Icon(Icons.check_circle, color: Colors.green, size: 16),
+                    const SizedBox(width: 6),
+                    Expanded(child: Text(
+                      isOR 
+                          ? 'Using OpenRouter → Model: openai/gpt-4o-mini (fast, cheap, smart). You can change model in code to anthropic/claude-3.5-sonnet for reasoning or google/gemini-2.0-flash for speed.'
+                          : 'Using Gemini → Model auto-fallback: gemini-2.5-flash, gemini-2.0-flash, gemini-1.5-flash',
+                      style: const TextStyle(fontSize: 11),
+                    )),
+                  ]),
+                ),
+              ],
             ]),
           ),
         ),
@@ -172,16 +236,16 @@ class _SettingsScreenState extends State<SettingsScreen> {
         // ---- Data / about ----
         Card(
           child: Column(children: [
-            const ListTile(
-              leading: Icon(Icons.info_outline),
-              title: Text('Inter AI Study Buddy v1.3.0'),
-              subtitle: Text(
+            ListTile(
+              leading: const Icon(Icons.info_outline),
+              title: const Text('Inter AI Study Buddy v1.4.0 - OpenRouter Update'),
+              subtitle: const Text(
                   'Courses: Commerce • Economics • Civics • Accountancy • '
                   'Telugu • English (Inter 1st & 2nd year, English medium).\n'
                   'Model papers & study material open directly from the '
                   'official Telangana Board of Intermediate Education (TSBIE) '
                   '— no third-party websites.\n'
-                  'New: flashcards, search, bookmarks, learned tracker, '
+                  'New in v1.4.0: OpenRouter support (sk-or-v1-...), GPT-4o-mini, Claude, Gemini 2.0 via one key, flashcards, search, bookmarks, learned tracker, '
                   'streak, exam countdown & dark mode.'),
             ),
             TextButton.icon(
@@ -205,6 +269,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 if (sure == true) {
                   await state.clearAll();
                   _keyController.clear();
+                  setState(() {});
                 }
               },
               icon: const Icon(Icons.delete_outline),

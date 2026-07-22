@@ -97,7 +97,7 @@ class _ExamAnswerScreenState extends State<ExamAnswerScreen> {
       _busy = false;
       if (_offlineMatches.isEmpty) {
         _result = 'No close offline match in this subject\'s question bank. '
-            'Add a free Gemini key in Settings to generate any answer live!';
+            ' Add OpenRouter (sk-or-v1-...) or Gemini key in Settings for live AI answers!';
       }
     });
   }
@@ -187,7 +187,7 @@ class _ExamAnswerScreenState extends State<ExamAnswerScreen> {
                   MaterialPageRoute(builder: (_) => const SettingsScreen())),
               icon: const Icon(Icons.key_outlined, size: 18),
               label: const Text(
-                  'Add free Gemini key for unlimited AI answers'),
+                  'Add OpenRouter or Gemini key for unlimited AI'),
             ),
           const SizedBox(height: 12),
           if (_offlineMatches.isNotEmpty) ...[

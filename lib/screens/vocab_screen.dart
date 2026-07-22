@@ -51,7 +51,7 @@ class _VocabScreenState extends State<VocabScreen> {
     final state = context.read<AppState>();
     if (!state.hasKey) {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-          content: Text('Add a free Gemini key in Settings for AI words.')));
+          content: Text('Add OpenRouter (sk-or-v1-...) or Gemini key for AI.')));
       return;
     }
     showDialog(
