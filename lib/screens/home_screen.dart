@@ -14,6 +14,7 @@ import 'settings_screen.dart';
 import 'subjects_screen.dart';
 import 'tutor_screen.dart';
 import 'vocab_screen.dart';
+import 'pdf_library_screen.dart';
 import 'accessibility_screen.dart';
 import 'license_screen.dart';
 
@@ -166,6 +167,7 @@ class HomeScreen extends StatelessWidget {
               _FeatureCard(emoji: '🔤', title: 'Vocabulary', subtitle: 'Telugu meanings • flashcards', onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const VocabScreen())), semanticLabel: 'Vocabulary, Telugu meanings'),
               _FeatureCard(emoji: '♿', title: 'TalkBack Guide', subtitle: 'Accessibility, TalkBack help', onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const AccessibilityScreen())), semanticLabel: 'TalkBack guide, accessibility help'),
               _FeatureCard(emoji: '📄', title: 'Licenses', subtitle: 'Licenses & Navigation guide', onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const LicenseScreen())), semanticLabel: 'Licenses and navigation guide'),
+              _FeatureCard(emoji: '📄', title: 'My PDFs - Upload & Scan', subtitle: 'Upload PDFs, auto scan, detect Telugu/English, translate, ask AI', onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const PdfLibraryScreen())), semanticLabel: 'My PDFs, upload, auto scan, language detect, translate, ask AI'),
               _FeatureCard(emoji: '⚙️', title: 'Settings', subtitle: 'API key Opus/Sonnet, voice, theme', onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const SettingsScreen())), semanticLabel: 'Settings, API key, voice, theme'),
             ],
           ),
