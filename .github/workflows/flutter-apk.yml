@@ -5,10 +5,6 @@ permissions:
 on:
   push:
     branches: ["main"]
-    paths:
-      - "lib/**"
-      - "pubspec.yaml"
-      - ".github/workflows/flutter-apk.yml"
   workflow_dispatch:
 
 jobs:
@@ -30,45 +26,50 @@ jobs:
           channel: stable
           cache: true
 
+      - name: Create .env
+        run: |
+          echo "SUPABASE_URL=https://bwjoqomechsubjvwwbbk.supabase.co" > .env
+          echo "SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ3am9xb21lY2hzdWJqdnd3YmJrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQ2NjI2MDksImV4cCI6MjEwMDIzODYwOX0.b23oGlmu3u9iGeMpA0LAULpCoDUl17_MTgu9XA4S5k4" >> .env
+          echo "OPENROUTER_API_KEY=${{ secrets.OPENROUTER_API_KEY }}" >> .env
+          echo "OPENROUTER_MODEL=qwen/qwen3-coder:free" >> .env
+
       - name: Get dependencies
         run: flutter pub get
 
       - name: Generate Android platform files
         run: flutter create --platforms=android .
 
-      - name: Add mic & internet permissions
+      - name: Fix compileSdk 36
+        run: |
+          sed -i 's/compileSdk 34/compileSdk 36/g' android/app/build.gradle.kts 2>/dev/null || true
+          sed -i 's/flutter.compileSdkVersion/36/g' android/app/build.gradle.kts 2>/dev/null || true
+          grep compileSdk android/app/build.gradle.kts || true
+
+      - name: Add permissions
         run: |
           MANIFEST=android/app/src/main/AndroidManifest.xml
-          python3 - <<'EOF'
-          import re
-          p = 'android/app/src/main/AndroidManifest.xml'
-          s = open(p).read()
-          perms = ('    <uses-permission android:name="android.permission.INTERNET"/>\n'
-                   '    <uses-permission android:name="android.permission.RECORD_AUDIO"/>\n')
-          if 'RECORD_AUDIO' not in s:
-              s = s.replace('<application', perms + '    <application', 1)
-          open(p, 'w').write(s)
-          print('Manifest patched')
-          EOF
+          if ! grep -q "RECORD_AUDIO" "$MANIFEST"; then
+            sed -i '/<application/i \    <uses-permission android:name="android.permission.INTERNET"/>\n    <uses-permission android:name="android.permission.RECORD_AUDIO"/>' "$MANIFEST"
+          fi
 
       - name: Build debug APK
         run: flutter build apk --debug
 
-      - name: Give the APK a friendly name
+      - name: Rename APK
         run: cp build/app/outputs/flutter-apk/app-debug.apk build/app/outputs/flutter-apk/InterAIStudyBuddy.apk
 
-      - name: Upload APK artifact
+      - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: inter-ai-study-buddy-debug-apk
           path: build/app/outputs/flutter-apk/InterAIStudyBuddy.apk
           retention-days: 90
 
-      - name: Upload APK as Release (outage-proof)
+      - name: Upload as Release
         if: github.ref == 'refs/heads/main'
         run: python3 .github/scripts/release_apk.py
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           APK_PATH: build/app/outputs/flutter-apk/InterAIStudyBuddy.apk
           TAG_BASE: flutter-apk
-          RELEASE_NAME: Inter AI Study Buddy APK
+          RELEASE_NAME: Inter AI Study Buddy APK - PDF + Science + Real Free Models
